@@ -1,0 +1,394 @@
+@import url("../style.css");
+
+:root {
+  --bg-color: #008080;
+  --text-color1: white;
+  --text-color2: black;
+
+  --fontFamily: "w95";
+
+  --theme-color1: #dedede;
+  --theme-color2: #c0c0c0;
+  --theme-color3: #808080;
+}
+
+body {
+  font: normal 1rem/150% var(--fontFamily);
+
+  background-color: var(--bg-color);
+  color: var(--text-color1);
+}
+
+@font-face {
+  font-family: "w95";
+  src: local("w95"), url("../../fonts/w95fa/W95.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "w95";
+  src: local("w95"), url("../../fonts/w95fa/W95.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+
+  text-shadow: 0.5px 0px white, 1.5px 0px white;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+.o-header {
+  height: 6vh;
+  grid-area: header;
+}
+
+.o-main {
+  height: 90vh;
+  width: 100vw;
+  grid-area: main;
+}
+
+.o-footer {
+  grid-area: footer;
+}
+
+/* --menu------------------------------------------- */
+
+header {
+  width: 100vw;
+  background-color: var(--theme-color2);
+
+  border-bottom-width: 3px;
+  border-bottom-style: ridge;
+  border-bottom-color: white;
+}
+
+.menu {
+  gap: 0.25%;
+}
+
+.menu__btns {
+  height: 90%;
+  padding: 0.2% 1%;
+
+  border: 4px ridge var(--theme-color3);
+  border-color: white black black white;
+
+  box-sizing: border-box;
+
+  color: var(--text-color2);
+
+  display: flex;
+  align-items: center;
+}
+
+.menu--on {
+  transform: translate(0.5px, 0.5px);
+
+  border-style: groove;
+  border-color: black white white black;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--theme-color2) 0,
+    var(--theme-color2) 1px,
+    var(--theme-color1) 1px,
+    var(--theme-color1) 2px
+  );
+
+  text-shadow: 0.5px 0px var(--text-color2), 1.5px 0px var(--text-color2);
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+.menu--on::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--theme-color2) 0,
+    var(--theme-color2) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.menu--click:hover {
+  transform: translate(0.5px, 0.5px);
+
+  border-style: groove;
+  border-color: black white white black;
+
+  background: repeating-linear-gradient(
+    0deg,
+    var(--theme-color2) 0,
+    var(--theme-color2) 1px,
+    var(--theme-color1) 1px,
+    var(--theme-color1) 2px
+  );
+}
+
+.menu--click:hover::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--theme-color2) 0,
+    var(--theme-color2) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+/* --main------------------------------------------- */
+
+.container {
+  position: relative;
+}
+
+.container__box {
+  height: 90%;
+  display: flex;
+
+  overflow: hidden;
+}
+
+.text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 1% 0;
+  height: 10%;
+  width: fit-content;
+  box-sizing: border-box;
+
+  font-size: 2em;
+}
+
+/* ------btns------ */
+
+.container__box__buttons {
+  padding: 0 2%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 3rem;
+  grid-template-rows: 3rem;
+  gap: 6%;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.btn-div {
+  max-height: 4em;
+  max-width: 4em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.btn-div__btn {
+  max-height: 90%;
+
+  cursor: pointer;
+
+  transition: 0.1s ease;
+}
+
+.btn-div__btn--img {
+  width: 100%;
+}
+
+.btn-div__btn.clicked {
+  transform: scale(0.9);
+}
+
+.btn-div__title {
+  height: 10%;
+  margin-top: 5%;
+  width: 6em;
+
+  cursor: default;
+
+  text-align: center;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+#freckle {
+  cursor: crosshair;
+}
+
+/* ----------dragbox---------- */
+
+.dragbox {
+  height: 70vh;
+  width: 60vh;
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  cursor: default;
+
+  border: 4px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+
+  background-color: var(--theme-color2);
+}
+
+.dragbox__header {
+  z-index: 10;
+  height: 7%;
+  padding: 2%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--theme-color3);
+
+  text-shadow: 0.5px 0px var(--theme-color2), 1.5px 0px var(--theme-color2);
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+.dragbox__content {
+  height: 92.75%;
+  margin: 1px;
+
+  box-sizing: border-box;
+
+  overflow-y: hidden;
+  scroll-behavior: auto;
+
+  border: 3px ridge white;
+  border-top-color: black;
+  border-left-color: black;
+
+  background-color: white;
+  color: var(--text-color2);
+}
+
+#pixelizer-dragbox {
+  transform: translate(-50%, -50%);
+}
+
+#pixelizer {
+  height: 100%;
+  width: 100%;
+}
+
+#doc-txt {
+  width: 15vw;
+  height: 45vh;
+
+  transform: translate(150%, -5%);
+}
+
+.txtdoc {
+  overflow-y: scroll;
+}
+
+.txt-line {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.krillyicoN {
+  opacity: 0.5;
+}
+
+/* ---------misc--------- */
+
+.hidden--text {
+  left: 115%;
+  color: red;
+}
+
+.done {
+  text-decoration: line-through 0.2rem rgb(10, 97, 10);
+}
+
+/* ---------------------mobile--------------------- */
+
+@media only screen and (max-width: 1200px) {
+  body {
+    font: normal 1rem/120% var(--fontFamily);
+  }
+
+  .menu {
+    gap: 1%;
+  }
+
+  .menu__btns {
+    font-size: 1.2em;
+  }
+
+  .text {
+    padding: 1em;
+    font-size: 1.25em;
+    box-sizing: border-box;
+  }
+
+  .container__box__buttons {
+    padding: 0 4%;
+  }
+
+  .btn-div {
+    max-height: 3.5em;
+    max-width: 3.5em;
+  }
+
+  .btn-div__title {
+    font-size: .85em;
+    display: block;
+  }
+
+  .dragbox {
+    max-height: 40vh;
+    max-width: 60vw;
+  }
+
+  #pixelizer-dragbox {
+    transform: translate(-30%, -80%);
+  }
+
+  #doc-txt {
+    width: 40vw;
+    height: 45vh;
+
+    transform: translate(-9%, 7%);
+  }
+
+  ul {
+    padding-left: 1.3em;
+    margin-top: .5em;
+  }
+
+  .txt-line {
+    margin-top: 0.25em;
+  }
+}

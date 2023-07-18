@@ -1,0 +1,78 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 10vh;
+}
+
+.container {
+  height: 80vh;
+  width: 100vw;
+}
+
+footer {
+  height: 10vh;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden--text {
+  opacity: 0;
+  position: absolute;
+}
+
+.hidden--text:hover {
+  opacity: 0.9;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.under {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.thrg {
+  text-decoration: line-through;
+}
+
+/* -----menu----- */
+
+.menu {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 5%;
+
+  position: relative;
+  z-index: 1;
+}
+
+.menu__btns {
+  text-decoration: none;
+
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}
+
+.menu--on {
+  cursor: default;
+}
+
+
+/* ---------------------mobile--------------------- */
+
+@media (max-width: 1200px) {
+  body {
+    height: 100%;
+    width: 100%;
+  }
+}

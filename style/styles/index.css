@@ -1,0 +1,286 @@
+@import url("../style.css");
+
+@font-face {
+  font-family: "imb_2y";
+  src: 
+  local("imb_2y"),
+  url("../../fonts/ibm/IBM_BIOS-2y.woff");
+}
+
+:root {
+  --bg-color-1: #141414;
+  --bg-color-2: black;
+  --color-1: rgb(0, 255, 51);
+
+  --txt-color-1: rgb(51, 255, 0);
+  --txt-color-2: rgb(51, 155, 0);
+  --txt-color-3: rgb(255, 176, 0);
+
+  --fontFamily: imb_2y;
+
+  --txt-shdw1: rgba(51, 255, 0, 0.5);
+  --txt-shdw2: rgba(0, 255, 51, 0.3);
+
+  --txt-shdwAlt1: rgba(232, 140, 12, 0.5);
+  --txt-shdwAlt2: rgba(232, 184, 12, 0.3);
+}
+
+body {
+  font-family: var(--fontFamily);
+  font-size: 1rem;
+
+  background-color: var(--bg-color-1);
+  color: var(--txt-color-1);
+}
+
+::selection {
+  background-color: var(--txt-shdw1);
+}
+
+.menu {
+  background-color: var(--bg-color-1);
+}
+
+.menu__btns {
+  color: var(--txt-color-1);
+}
+
+.menu--click:hover {
+  color: var(--txt-color-2);
+  transform: translate(0.1px, 2px);
+}
+
+.menu--on {
+  color: var(--txt-color-2);
+
+  cursor: default;
+}
+
+.container {
+  display: flex;
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--txt-2);
+  font-size: 1.5rem;
+}
+
+/* ---------logbox--------- */
+
+.logbox {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+
+  width: 20%;
+  height: 100%;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.logbox__title {
+  margin: 0;
+  padding-left: 5%;
+  box-sizing: border-box;
+
+  font-size: 1.25rem;
+}
+
+.hr {
+  margin: 0;
+}
+
+.logbox__list {
+  height: 85%;
+  padding: 10% 0;
+
+  scrollbar-color: transparent transparent;
+
+  font-size: 1rem;
+}
+
+.entry-date__btn {
+  display: none;
+}
+
+.entries {
+  width: 110%;
+  max-height: 25vh;
+  padding: 5% 2% 5% 0;
+
+  border: 1px solid var(--color-1);
+
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+
+  background-color: var(--bg-color-1);
+
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: 2px;
+}
+
+.entries__item {
+  margin-top: 2%;
+}
+
+.entries__link {
+  color: var(--txt-color-3);
+}
+
+/* --functionality-- */
+
+.logbox__list,
+.entries {
+  position: relative;
+  box-sizing: border-box;
+}
+
+ul {
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  width: fit-content;
+}
+
+.entry-date {
+  position: static;
+}
+
+.entry-date .entries {
+  position: absolute;
+  display: none;
+  z-index: 5;
+}
+
+.entry-date__btn:checked ~ .entries {
+  display: block;
+}
+
+/* --animation-------------------------------------------------- */
+
+.crt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(40, 40, 40, 0.1), rgba(0, 0, 0, 0.7));
+  background-size: 100% 3px;
+  z-index: 9999;
+  pointer-events: none;
+
+  animation: scans 15s linear infinite;
+}
+
+@keyframes scans {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px 3px;
+  }
+}
+
+.ghost {
+  animation: ghost 0.5s linear infinite;
+}
+
+@keyframes ghost {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.crt {
+  animation: textShadow 1.5s linear infinite;
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.5px 0 1px var(--txt-shdw1), -0.5px 0 1px var(--txt-shdw2),
+      0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px var(--txt-shdw1), -1.5px 0 1px var(--txt-shdw2),
+      0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px var(--txt-shdw1), -0.1px 0 1px var(--txt-shdw2),
+      0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px var(--txt-shdw1), -2px 0 1px var(--txt-shdw2),
+      0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px var(--txt-shdw1), -2.5px 0 1px var(--txt-shdw2),
+      0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px var(--txt-shdw1), 0 0 1px var(--txt-shdw2), 0 0 3px;
+  }
+}
+
+.entries__link {
+  animation: textShadowAlt 1.5s linear infinite;
+}
+
+@keyframes textShadowAlt {
+  0% {
+    text-shadow: 0.5px 0 1px var(--txt-shdwAlt1), -0.5px 0 1px var(--txt-shdwAlt2),
+      0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px var(--txt-shdwAlt1), -1.5px 0 1px var(--txt-shdwAlt2),
+      0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px var(--txt-shdwAlt1), -0.1px 0 1px var(--txt-shdwAlt2),
+      0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px var(--txt-shdwAlt1), -2px 0 1px var(--txt-shdwAlt2),
+      0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px var(--txt-shdwAlt1), -2.5px 0 1px var(--txt-shdwAlt2),
+      0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px var(--txt-shdwAlt1), 0 0 1px var(--txt-shdwAlt2), 0 0 3px;
+  }
+}
+
+/* ---------------------mobile--------------------- */
+
+@media only screen and (max-width: 1200px) {
+
+  .logbox {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4%;
+
+    width: fit-content;
+    height: 35%;
+  }
+
+  .entry-date__btn:checked ~ .entries {
+    display: block;
+    top: 0;
+    right: 10%;
+  }
+  
+}

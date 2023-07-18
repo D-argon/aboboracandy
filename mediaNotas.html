@@ -1,0 +1,37 @@
+<meta charset="UTF-8" />
+<!DOCTYPE html>
+<head> </head>
+
+<body>
+  <script>
+    function pulaLinha() {
+      document.write("<br><br>");
+    }
+
+    function frase(mensagem) {
+      document.write(mensagem);
+      pulaLinha();
+    }
+
+    const quantNotas = parseInt(prompt("quantas notas?"));
+    console.log("quantidade: " + quantNotas);
+
+    if (isNaN(quantNotas) || quantNotas <= 0) {
+      alert("inválido. Por favor coloque um número inteiro & positivo.");
+      location.reload(true);
+    } else {
+      let totalN = 0;
+
+      for (let valNota = 1; valNota <= quantNotas; valNota++) {
+        const nota = parseFloat(prompt(`nota ${valNota}:`).replace(",", "."));
+        console.log(`valN${valNota}: ` + nota);
+        totalN += nota;
+      }
+
+      const calcMedia = (totalN / quantNotas).toFixed(2).replace(".", ",");
+      console.log("media: " + totalN / quantNotas);
+
+      frase(`A média das ${quantNotas} notas é ${calcMedia}.`);
+    }
+  </script>
+</body>
