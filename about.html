@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="favicon.ico?v=4" rel="shortcut icon" type="image/ico" />
+    <link href="/imgs/favicon.ico?v=4" rel="icon" type="image/x-icon" />
 
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/styles/about.css" />
@@ -34,8 +34,8 @@
           </h1>
           <br /><br />
           <p class="content__paragraph">
-            in a chat with a wizard I decided to trail a
-            similar way of thinking as their's.
+            in a chat with a wizard I decided to trail a similar way of thinking
+            as their's.
             <br />
             You may wonder what is it but I will leave you to it.
           </p>
@@ -63,7 +63,7 @@
             you my find many of my likings here but heres some spoiler...
           </p>
           <br />
-          <p class="content__paragraph">major breakthrough</p>
+          <h3>major breakthrough</h3>
           <br />
           <p class="content__paragraph">
             abobora stands for Pumpkin. Theres a
@@ -92,7 +92,7 @@
               pão de Mel
               <img
                 src="imgs/media/paodemel.jpeg"
-                alt="Pão de mel"
+                alt=""
                 class="sweetjpg"
               /> </span
             >.<br />
@@ -101,7 +101,7 @@
               bolinho de chuva
               <img
                 src="imgs/media/bolinhodechuva.jpeg"
-                alt="Bolinho de chuva"
+                alt=""
                 class="sweetjpg"
               /> </span
             ><br />
@@ -188,7 +188,7 @@
             someday be a game-dev at least in one game!
           </p>
           <h3 id="consume">The ones I consume:</h3>
-          <h4>Movies</h4>
+          <h3>Movies</h3>
           <p class="content__paragraph">
             Im a big fan of horror and animation in general, so my top 3 is
             Coraline, Skinamarink and Across the Spiderverse. The amount of
@@ -197,15 +197,15 @@
               >(specially Skinamarink but that's reasonable)</small
             >
           </p>
-          <h4>Music</h4>
+          <h3>Music</h3>
           <p class="content__paragraph">
             anything with <span class="alt">cool bass</span>, but rock, post
             punk, jazz and indie games ost ( I like a LOT but the go for is
             <em>Life is Strange</em>!) too.<br />I really go for indie in
             everything, but mostly games. Speaking of which...
           </p>
-          <h4>Games</h4>
-          <p>
+          <h3>Games</h3>
+          <p class="content__paragraph">
             i could go for some hours but, as mentioned before, I intend to
             place indicatives around this web. However I won't leave you with
             nothing.<br />
@@ -216,7 +216,7 @@
             Spirit standalone), <span class="alt">Blasphemous</span> and
             <span class="alt">Fran Bow</span>.
           </p>
-          <h4>Reading</h4>
+          <h3>Reading</h3>
           <p class="content__paragraph">
             as for reading I don't have thaaat enthusiasm, so anything that
             relates with the others topics is fine.<br />
@@ -230,10 +230,13 @@
           </ul>
           <p class="content__paragraph">
             I like hard to read (in a technical sense) books.
-          </p><br />
+          </p>
+          <br />
           <p class="content__paragraph">
-            That's it! But just for the moment, as you can see Krilly is on the painting still!
-          </p><br />
+            That's it! But just for the moment, as you can see Krilly is on the
+            painting still!
+          </p>
+          <br />
           <a href="#top" class="links">back to the top</a>
           <!-- to do 
                 - sections collapsable 
@@ -266,10 +269,11 @@
         >
           Email
         </a>
-        <div class="socials--links links" id="discord">
-          discord: __dargon<span class="hidden--text"
-            ><span class="thrg">#7564</span></span
-          >
+        <div class="socials--links links">
+          discord:
+          <a href="#dc" id="dc" class="links" title="copy to clipboard!"
+            >__dargon</a
+          ><span class="hidden--text thrg">#7564</span>
         </div>
         <a
           href="https://open.spotify.com/user/dargondark"
@@ -286,14 +290,27 @@
           Tumblr
         </a>
       </div>
-      <div class="imgWrapper">
-        <img
-          src="https://external-content.duckduckgo.com/iu/?u=https://gamepedia.cursecdn.com/minecraft_gamepedia/e/eb/MissingTextureInventory.png"
-          title="A bunch of paint!"
-          width="64"
-        />
+      <div class="imgWrapper" title="copy to clipboard!">
+        <a href="https://aboboracandy.neocities.org" id="abobora"
+          ><img
+            src="https://aboboracandy.neocities.org/imgs/bttn/aboborabtn.gif"
+            alt="aboboracandy"
+        /></a>
       </div>
     </footer>
+    <script>
+      const DC = document.getElementById('dc');
+
+      document.getElementById('abobora').addEventListener('click', (e) => {
+        navigator.clipboard.writeText(document.querySelector('.imgWrapper').innerHTML);
+        e.preventDefault();
+      });
+      
+      DC.addEventListener('click', (e) => {
+        navigator.clipboard.writeText(DC.innerText);
+        e.preventDefault();
+      });
+    </script>
     <!-- TO DO
     px animation (Clara 2ndPrs computer logged on software) for literal convo -->
     <!-- <script src="js/copy.js"></script> -->

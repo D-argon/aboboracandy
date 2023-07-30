@@ -2,9 +2,7 @@
 
 @font-face {
   font-family: "imb_2y";
-  src: 
-  local("imb_2y"),
-  url("../../fonts/ibm/IBM_BIOS-2y.woff");
+  src: local("imb_2y"), url("../../fonts/ibm/IBM_BIOS-2y.woff");
 }
 
 :root {
@@ -67,6 +65,17 @@ body {
 .title {
   font-family: var(--txt-2);
   font-size: 1.5rem;
+}
+
+.links {
+  text-decoration: none;
+  color: inherit;
+}
+
+.small {
+  font-size: 0.75em;
+  line-height: 100%;
+  letter-spacing: normal;
 }
 
 /* ---------logbox--------- */
@@ -161,6 +170,12 @@ ul {
   display: block;
 }
 
+/* --footer----------------------------------------------------- */
+
+.footer__title{
+  text-align: center;
+}
+
 /* --animation-------------------------------------------------- */
 
 .crt::before {
@@ -240,34 +255,34 @@ ul {
 
 @keyframes textShadowAlt {
   0% {
-    text-shadow: 0.5px 0 1px var(--txt-shdwAlt1), -0.5px 0 1px var(--txt-shdwAlt2),
-      0 0 3px;
+    text-shadow: 0.5px 0 1px var(--txt-shdwAlt1),
+      -0.5px 0 1px var(--txt-shdwAlt2), 0 0 3px;
   }
   20% {
-    text-shadow: 1.5px 0 1px var(--txt-shdwAlt1), -1.5px 0 1px var(--txt-shdwAlt2),
-      0 0 3px;
+    text-shadow: 1.5px 0 1px var(--txt-shdwAlt1),
+      -1.5px 0 1px var(--txt-shdwAlt2), 0 0 3px;
   }
   40% {
-    text-shadow: 0.1px 0 1px var(--txt-shdwAlt1), -0.1px 0 1px var(--txt-shdwAlt2),
-      0 0 3px;
+    text-shadow: 0.1px 0 1px var(--txt-shdwAlt1),
+      -0.1px 0 1px var(--txt-shdwAlt2), 0 0 3px;
   }
   60% {
     text-shadow: 2px 0 1px var(--txt-shdwAlt1), -2px 0 1px var(--txt-shdwAlt2),
       0 0 3px;
   }
   80% {
-    text-shadow: 2.5px 0 1px var(--txt-shdwAlt1), -2.5px 0 1px var(--txt-shdwAlt2),
-      0 0 3px;
+    text-shadow: 2.5px 0 1px var(--txt-shdwAlt1),
+      -2.5px 0 1px var(--txt-shdwAlt2), 0 0 3px;
   }
   100% {
-    text-shadow: 0 0 1px var(--txt-shdwAlt1), 0 0 1px var(--txt-shdwAlt2), 0 0 3px;
+    text-shadow: 0 0 1px var(--txt-shdwAlt1), 0 0 1px var(--txt-shdwAlt2),
+      0 0 3px;
   }
 }
 
 /* ---------------------mobile--------------------- */
 
 @media only screen and (max-width: 1200px) {
-
   .logbox {
     left: 50%;
     transform: translateX(-50%);
@@ -282,5 +297,4 @@ ul {
     top: 0;
     right: 10%;
   }
-  
 }

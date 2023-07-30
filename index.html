@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="favicon.ico?v=4" rel="shortcut icon" type="image/ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link href="/imgs/media/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
 
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/styles/index.css" />
@@ -24,16 +25,48 @@
         <a href="pixelizer.html" class="menu__btns menu--click caps">
           /pixeltron</a
         >
+        <a href="links.html" class="menu__btns menu--click caps"> /links</a>
       </nav>
     </header>
     <main class="container">
       <h1 class="title">Under coding<span class="ghost">_</span></h1>
       <div class="logbox">
-        <h2 class="logbox__title caps">logs</h2>
+        <h2 class="logbox__title caps">
+          <a href="feed.xml" class="links">logs</a>
+        </h2>
         <h3 class="hr">________________________</h3>
         <div class="logbox__list">
           <ul>
             <li>---</li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-220723"
+              />
+              <label class="under" for="entry-220723"> 22|07|23 </label>
+              <div class="entries">
+                <ul>
+                  <li class="entries__item caps">
+                    we have a
+                    <a href="imgs/bttn/aboborabtn.gif" class="entries__link"
+                      >site button</a
+                    >
+                    !!!!;
+                  </li>
+                  <span class="small"
+                    >could be more but I don't want to overwork it, shall I
+                    improve it in future</span
+                  >
+                  <li class="entries__item">
+                    made a
+                    <a href="feed.xml" class="entries__link"
+                      ><img src="imgs/media/rss.png" alt="RSS" height="25" /></a
+                    >;
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="entry-date">
               <input
                 type="checkbox"
@@ -43,11 +76,18 @@
               <label class="under" for="entry-160723"> 16|07|23 </label>
               <div class="entries">
                 <ul>
-                  <li class="entries__item">Mobile port!!!</li>
-                  <br />
-                  go on and hit that CTRL + M (if u r on firefox at least).
-                  <li class="entries__item">btw I did some general improvements</li>
-                  <li class="entries__item">fixed the <span class="caps">logs</span> checkbox and < a >'s textShadow animation :P</li>
+                  <li class="entries__item">
+                    Mobile port!!!;<br />
+                    <span class="small">
+                      go on and hit that CTRL + M (if u r on firefox at
+                      least)</span
+                    >
+                  </li>
+                  <li class="entries__item">some general improvements;</li>
+                  <li class="entries__item">
+                    fixed the <span class="caps">logs</span> checkbox and
+                    &#x3C;a&#x3E;'s textShadow animation :P;
+                  </li>
                 </ul>
               </div>
             </li>
@@ -85,8 +125,7 @@
               <label class="under" for="entry-020723"> 02|07|23 </label>
               <div class="entries">
                 <ul>
-                  <p>etobleh.png</p>
-                  <br />
+                  etobleh.png
                   <li class="entries__item">
                     creation of
                     <a href="pixelizer.html" class="entries__link">todo.txt</a>;
@@ -110,7 +149,10 @@
                 <ul>
                   <li class="entries__item">
                     creation of
-                    <a href="pixelizer.html" class="entries__link caps">logs</a
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link caps"
+                      >logs</a
                     >;
                   </li>
                 </ul>
@@ -122,8 +164,14 @@
       </div>
     </main>
     <footer>
-      <h1 align="center" class="caps">imb</h1>
+      <h1 class="footer__title caps">imb</h1>
     </footer>
     <script src="js/logbox.js"></script>
+    <!-- <script>
+      $.get(
+        "https://weirdscifi.ratiosemper.com/neocities.php?sitename=aboboracandy",
+        (data) => {}
+      );
+    </script> -->
   </body>
 </html>
