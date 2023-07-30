@@ -1,0 +1,4 @@
+#!/bin/sh
+
+printf '#!/bin/sh\nneocities push .' >.git/hooks/pre-push && \
+chmod u+x .git/hooks/pre-push

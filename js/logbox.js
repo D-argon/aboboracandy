@@ -22,7 +22,7 @@ $(document).ready(function () {
             display: "block",
             top: menuItemPos.top,
             left:
-              menuItemPos.left + Math.round($menuItem.outerWidth() * 1.01),
+              menuItemPos.left - Math.round($menuItem.outerWidth() * 4),
           });
         }
 

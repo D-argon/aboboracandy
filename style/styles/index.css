@@ -55,11 +55,17 @@ body {
 }
 
 .container {
-  display: flex;
   position: relative;
 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.box,
+#clock {
+  width: 100%;
+  text-align: center;
 }
 
 .title {
@@ -142,12 +148,12 @@ body {
 }
 
 /* --functionality-- */
-
+/* 
 .logbox__list,
 .entries {
   position: relative;
   box-sizing: border-box;
-}
+} */
 
 ul {
   overflow-x: hidden;
@@ -155,20 +161,20 @@ ul {
 
   width: fit-content;
 }
-
+/* 
 .entry-date {
   position: static;
-}
+} */
 
 .entry-date .entries {
   position: absolute;
   display: none;
   z-index: 5;
 }
-
+/* 
 .entry-date__btn:checked ~ .entries {
   display: block;
-}
+} */
 
 /* --footer----------------------------------------------------- */
 
