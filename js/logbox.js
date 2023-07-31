@@ -1,28 +1,29 @@
 $(document).ready(function () {
-    // whenever we hover over a menu item that has a submenu
-    $(".entry-date__btn").on("change", function () {
-      var $entries = $(this).siblings(".entries");
+  var logDate = $(".entry-date__btn");
 
-      var $menuItem = $(this).closest("li.entry-date"),
-      menuItemPos = $menuItem.position();
+  logDate.on("change", function () {
+      var entries = $(this).siblings(".entries");
+
+      var menuItem = $(this).closest("li.entry-date"),
+      menuItemPos = menuItem.position();
 
       // grab the menu item's position relative to its positioned parent
       if ($(this).is(":checked")) {
         if ($(window).width() <= 1200) {
           // For mobile, show entries at the center and top
-          $entries.css({
+          entries.css({
             display: "block",
-            top: menuItemPos.top + Math.round($menuItem.outerHeight() * 1.01),
+            top: menuItemPos.top + Math.round(menuItem.outerHeight() * 1.01),
             left: "50%",
             transform: "translateX(-50%)",
           });
         } else {
           // For desktop, show entries relative to the menu item
-          $entries.css({
+          entries.css({
             display: "block",
             top: menuItemPos.top,
-            left:
-              menuItemPos.left - Math.round($menuItem.outerWidth() * 4),
+            right:
+              menuItemPos.left + Math.round(entries.outerWidth() * .59),
           });
         }
 
@@ -30,7 +31,7 @@ $(document).ready(function () {
         $('.entry-date__btn').not($(this)).prop('checked', false);
       } else {
         // Uncheck, hide entries
-        $entries.hide();  
+        entries.hide();  
       }
     });
 

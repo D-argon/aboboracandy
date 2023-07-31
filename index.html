@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="/imgs/media/favicon.ico" rel="icon" type="image/x-icon" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/styles/index.css" />
@@ -29,9 +29,9 @@
       </nav>
     </header>
     <main class="container">
-      <div class="box">
+      <!-- <div class="box">
         <h1 class="title">Under coding<span class="ghost">_</span></h1>
-      </div>
+      </div> -->
       <div class="logbox">
         <h2 class="logbox__title caps">
           <a href="feed.xml" class="links">logs</a>
@@ -40,6 +40,38 @@
         <div class="logbox__list">
           <ul>
             <li>---</li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-300723"
+              />
+              <label class="under" for="entry-300723"> 30|07|23 </label>
+              <div class="entries">
+                <ul>
+                  slideToTheLeft.mp3
+                  <li class="entries__item">
+                    there is a
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link"
+                    >
+                      Cool Clock™</a
+                    >
+                    now;
+                  </li>
+                  <li class="entries__item">
+                    You should check
+                    <a
+                      href="not_found.html"
+                      class="entries__link"
+                      target="_blank"
+                      >not_found.html</a
+                    >;
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="entry-date">
               <input
                 type="checkbox"
@@ -164,7 +196,7 @@
           </ul>
         </div>
       </div>
-      <div id="clock"></div>
+      <div id="clock" class="clock"></div>
     </main>
     <footer>
       <h1 class="footer__title caps">imb</h1>

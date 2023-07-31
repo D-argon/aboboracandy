@@ -62,15 +62,21 @@ body {
   justify-content: center;
 }
 
-.box,
-#clock {
+.clock {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
 }
 
-.title {
-  font-family: var(--txt-2);
-  font-size: 1.5rem;
+.clock__time {
+  font-size: 4em;
+}
+
+.clock__txt {
+  font-size: 1.25em;
+  margin-top: 2em;
 }
 
 .links {
@@ -148,33 +154,18 @@ body {
 }
 
 /* --functionality-- */
-/* 
-.logbox__list,
-.entries {
-  position: relative;
-  box-sizing: border-box;
-} */
-
 ul {
   overflow-x: hidden;
   overflow-y: scroll;
 
   width: fit-content;
 }
-/* 
-.entry-date {
-  position: static;
-} */
 
 .entry-date .entries {
   position: absolute;
   display: none;
   z-index: 5;
 }
-/* 
-.entry-date__btn:checked ~ .entries {
-  display: block;
-} */
 
 /* --footer----------------------------------------------------- */
 
