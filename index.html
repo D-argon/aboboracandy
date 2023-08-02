@@ -16,16 +16,14 @@
     <header>
       <nav class="menu" ondragstart="return false;">
         <span
-          class="menu__btns menu--on caps"
+          class="menu__btns menu--on"
           title="You're already home...  aren't you?"
         >
           /home
         </span>
-        <a href="about.html" class="menu__btns menu--click caps"> /about</a>
-        <a href="pixelizer.html" class="menu__btns menu--click caps">
-          /pixeltron</a
-        >
-        <a href="links.html" class="menu__btns menu--click caps"> /links</a>
+        <a href="about.html" class="menu__btns menu--click"> /about</a>
+        <a href="pixelizer.html" class="menu__btns menu--click"> /pixeltron</a>
+        <a href="links.html" class="menu__btns menu--click"> /links</a>
       </nav>
     </header>
     <main class="container">
@@ -33,13 +31,38 @@
         <h1 class="title">Under coding<span class="ghost">_</span></h1>
       </div> -->
       <div class="logbox">
-        <h2 class="logbox__title caps">
-          <a href="feed.xml" class="links">logs</a>
+        <h2 class="caps">
+          <a href="feed.xml" class="logbox__title">logs</a>
         </h2>
         <h3 class="hr">________________________</h3>
         <div class="logbox__list">
           <ul>
             <li>---</li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-020823"
+              />
+              <label class="under" for="entry-020823"> 02|08|23 </label>
+              <div class="entries">
+                <ul>
+                  clock 1.0
+                  <li class="entries__item">
+                    finished the
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link"
+                      >clocko</a
+                    >, added more txts, now it's at
+                    <a href="pixelizer.html" class="entries__link">pixelizer</a>
+                    too;
+                  </li>
+                  <li class="entries__item"><a href="links.html" class="entries__link">links</a> temporary layout done;</li>
+                  <li class="entries__item">mobile clock fix;</li>
+                </ul>
+              </div>
+            </li>
             <li class="entry-date">
               <input
                 type="checkbox"
@@ -55,8 +78,7 @@
                     <a
                       href="javascript:alert(`You're already at it.`);"
                       class="entries__link"
-                    >
-                      Cool Clock™</a
+                      >Cool Clock™</a
                     >
                     now;
                   </li>

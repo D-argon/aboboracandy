@@ -1,0 +1,44 @@
+@import url("../style.css");
+
+:root {
+  --bg-color: var(--d-mag);
+  --bg-color2: var(--black);
+  --bg-color3: #3b1631;
+
+  --txt-color: var(--fun-green);
+  --txt-color2: rgb(236, 150, 21);
+  --txt-color3: var(--lfun-green);
+
+  --fontFamily: "VT323", monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+
+  font: 400 1rem/150% var(--fontFamily);
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  background-color: var(--bg-colorTrs);
+  z-index: 1;
+}
+
+header:hover {
+  background-color: var(--bg-color);
+  transition: 0.3s ease-out;
+}
+
+.menu {
+  height: 10vh;
+  padding-left: 2%;
+}
+
+.menu__btns {
+  color: var(--txt-color-2);
+  text-transform: uppercase;
+}

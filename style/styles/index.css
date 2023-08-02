@@ -7,7 +7,7 @@
 
 :root {
   --bg-color-1: #141414;
-  --bg-color-2: black;
+  --bg-color-2: var(--black);
   --color-1: rgb(0, 255, 51);
 
   --txt-color-1: rgb(51, 255, 0);
@@ -36,11 +36,13 @@ body {
 }
 
 .menu {
+  height: 10vh;
   background-color: var(--bg-color-1);
 }
 
 .menu__btns {
   color: var(--txt-color-1);
+  text-transform: uppercase;
 }
 
 .menu--click:hover {
@@ -81,7 +83,11 @@ body {
 
 .links {
   text-decoration: none;
-  color: inherit;
+  color: var(--txt-color-3);
+}
+
+.links::selection {
+  background-color: var(--txt-shdwAlt1);
 }
 
 .small {
@@ -109,6 +115,8 @@ body {
   box-sizing: border-box;
 
   font-size: 1.25rem;
+  color: inherit;
+  text-decoration: none;
 }
 
 .hr {
@@ -116,9 +124,10 @@ body {
 }
 
 .logbox__list {
-  height: 85%;
+  max-height: 85%;
   padding: 10% 0;
 
+  overflow-y: scroll;
   scrollbar-color: transparent transparent;
 
   font-size: 1rem;
@@ -155,9 +164,6 @@ body {
 
 /* --functionality-- */
 ul {
-  overflow-x: hidden;
-  overflow-y: scroll;
-
   width: fit-content;
 }
 
@@ -169,7 +175,7 @@ ul {
 
 /* --footer----------------------------------------------------- */
 
-.footer__title{
+.footer__title {
   text-align: center;
 }
 
@@ -246,7 +252,8 @@ ul {
   }
 }
 
-.entries__link {
+.entries__link,
+.links {
   animation: textShadowAlt 1.5s linear infinite;
 }
 
@@ -278,8 +285,13 @@ ul {
 }
 
 /* ---------------------mobile--------------------- */
-
+/* FIXME */
 @media only screen and (max-width: 1200px) {
+  .menu {
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+  }
+
   .logbox {
     left: 50%;
     transform: translateX(-50%);
@@ -287,6 +299,10 @@ ul {
 
     width: fit-content;
     height: 35%;
+  }
+
+  .logbox__list {
+    max-height: 30%;
   }
 
   .entry-date__btn:checked ~ .entries {

@@ -13,17 +13,18 @@
   <body>
     <header>
       <nav class="menu" ondragstart="return false;">
-        <a href="index.html" class="menu__btns caps">Home</a>
-        <span href="about.html" class="menu__btns menu--on caps">About</span>
-        <a href="pixelizer.html" class="menu__btns caps">Pixeltron</a>
+        <a href="." class="menu__btns">Home</a>
+        <span href="about.html" class="menu__btns menu--on">About</span>
+        <a href="pixelizer.html" class="menu__btns">Pixeltron</a>
+        <a href="links.html" class="menu__btns menu--click">links</a>
       </nav>
     </header>
     <main class="container">
       <img
         class="krilly"
-        src="imgs/media/krilly.png"
-        alt="Krilly is painting the background"
-        title="I heard about a pumpkin landscape or something"
+        src="imgs/media/krillyNo.png"
+        alt="non-texture paint on the background wall"
+        title="dried non-texture paint"
       />
       <div class="container__box">
         <article class="content">
@@ -32,7 +33,6 @@
             Greetings.<br />
             <sub class="small">(in a non-ominous way)</sub>
           </h1>
-          <br /><br />
           <p class="content__paragraph">
             in a chat with a wizard I decided to trail a similar way of thinking
             as their's.
@@ -63,10 +63,10 @@
             you my find many of my likings here but heres some spoiler...
           </p>
           <br />
-          <h3>major breakthrough</h3>
-          <br />
+          <h2>Major breakthrough</h2>
           <p class="content__paragraph">
-            abobora stands for Pumpkin. Theres a
+            abobora ("a" as in father; first "o" as in shock; second as in bow)
+            stands for Pumpkin. Theres a
             <span class="sweet alt">
               pumpkin amorphous sweet
               <img
@@ -88,7 +88,7 @@
             we have here,<br />
             Cinnamon roll,<br />
             one I've seen people calling Honey Cakes, I prefer
-            <span class="sweet alt">
+            <span class="sweet alt" lang="pt-BR" translate="no">
               pão de Mel
               <img
                 src="imgs/media/paodemel.jpeg"
@@ -97,7 +97,7 @@
               /> </span
             >.<br />
             And last <em class="caps">but not least</em>
-            <span class="sweet alt">
+            <span class="sweet alt" lang="pt-BR" translate="no">
               bolinho de chuva
               <img
                 src="imgs/media/bolinhodechuva.jpeg"
@@ -187,7 +187,8 @@
             My most obvious one is coding, especially front-end, but I aim to
             someday be a game-dev at least in one game!
           </p>
-          <h3 id="consume">The ones I consume:</h3>
+          <br />
+          <h2 id="consume">The ones I consume:</h2>
           <h3>Movies</h3>
           <p class="content__paragraph">
             Im a big fan of horror and animation in general, so my top 3 is
@@ -224,9 +225,9 @@
           </p>
 
           <ul>
-            <li>Angústia</li>
-            <li><del>Divina</del> Comeddia</li>
-            <li>Oyasumi Punpun</li>
+            <li lang="pt-BR" translate="no">Angústia</li>
+            <li lang="it" translate="no"><del>Divina</del> Comeddia</li>
+            <li lang="ja" translate="no">Oyasumi Punpun</li>
           </ul>
           <p class="content__paragraph">
             I like hard to read (in a technical sense) books.
@@ -238,13 +239,6 @@
           </p>
           <br />
           <a href="#top" class="links">back to the top</a>
-          <!-- to do 
-                - sections collapsable 
-                - organize text
-                - add contact opt
-                - district button
-                - revise text
-            -->
         </article>
         <aside class="box__lateral">
           <details open class="box__lateral--option">
@@ -298,21 +292,8 @@
         /></a>
       </div>
     </footer>
-    <script>
-      const DC = document.getElementById('dc');
-
-      document.getElementById('abobora').addEventListener('click', (e) => {
-        navigator.clipboard.writeText(document.querySelector('.imgWrapper').innerHTML);
-        e.preventDefault();
-      });
-      
-      DC.addEventListener('click', (e) => {
-        navigator.clipboard.writeText(DC.innerText);
-        e.preventDefault();
-      });
-    </script>
-    <!-- TO DO
+    <script src="js/copy.js"></script>
+    <!-- TODO
     px animation (Clara 2ndPrs computer logged on software) for literal convo -->
-    <!-- <script src="js/copy.js"></script> -->
   </body>
 </html>

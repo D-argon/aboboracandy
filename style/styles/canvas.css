@@ -37,25 +37,15 @@ body {
   letter-spacing: 1px;
 }
 
-.o-header {
-  height: 6vh;
-  grid-area: header;
-}
-
-.o-main {
-  height: 90vh;
-  width: 100vw;
-  grid-area: main;
-}
-
-.o-footer {
-  grid-area: footer;
-}
-
 /* --menu------------------------------------------- */
 
-header {
-  width: 100vw;
+.header {
+  display: flex;
+  align-items: center;
+
+  height: 6vh;
+  padding: 0 0.3em;
+
   background-color: var(--theme-color2);
 
   border-bottom-width: 3px;
@@ -64,17 +54,17 @@ header {
 }
 
 .menu {
-  gap: 0.25%;
+  width: fit-content;
+  gap: 0.25em;
 }
 
 .menu__btns {
   height: 90%;
-  padding: 0.2% 1%;
+  padding: 0.2% 0.5em;
+  box-sizing: border-box;
 
   border: 4px ridge var(--theme-color3);
   border-color: white black black white;
-
-  box-sizing: border-box;
 
   color: var(--text-color2);
 
@@ -147,6 +137,23 @@ header {
     transparent 1px,
     transparent 2px
   );
+}
+
+.clock {
+  width: 8%;
+  height: 80%;
+  margin-left: auto;
+  padding-left: 1em;
+  box-sizing: border-box;
+
+  border-style: groove;
+  border-color: black white white black;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  color: var(--text-color2);
 }
 
 /* --main------------------------------------------- */
@@ -268,6 +275,7 @@ header {
 
   background-color: var(--theme-color3);
 
+  font-size: 1em;
   text-shadow: 0.5px 0px var(--theme-color2), 1.5px 0px var(--theme-color2);
   color: transparent;
   letter-spacing: 1px;
@@ -340,10 +348,16 @@ header {
 
   .menu {
     gap: 1%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
   }
 
   .menu__btns {
     font-size: 1.2em;
+  }
+
+  .clock {
+    width: 45%;
   }
 
   .text {
@@ -362,7 +376,7 @@ header {
   }
 
   .btn-div__title {
-    font-size: .85em;
+    font-size: 0.85em;
     display: block;
   }
 
@@ -384,7 +398,7 @@ header {
 
   ul {
     padding-left: 1.3em;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   .txt-line {

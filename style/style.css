@@ -5,21 +5,20 @@
   src: url("../../fonts/notJam/NotJamBlkltr13.ttf");
 }
 
-html {
-  scroll-behavior: smooth;
-}
+:root {
+  --d-mag: #351526;
+  --black: #000;
+  --white: #fff;
+  --fun-green: #599d29;
+  --lfun-green: #599d29;
 
-header {
-  height: 10vh;
+  --fontFamily: 'VT323', monospace;
+  --fontFamily2: notJam13;
 }
 
 .container {
   height: 80vh;
   width: 100vw;
-}
-
-footer {
-  height: 10vh;
 }
 
 .hide {

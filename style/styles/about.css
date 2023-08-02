@@ -1,20 +1,17 @@
 @import url("../style.css");
 
-@font-face {
-  font-family: "hehe";
-  src: url("../../fonts/hehe/hehe.ttf");
-}
-
 :root {
-  --bg-color-1: #341936;
-  --bg-color-2: black;
-  --bg-color-3: #401e42;
+  --bg-color-1: var(--d-mag);
+  --bg-color-2: var(--black);
+  --bg-colorTrs: rgba(53, 21, 38, .6zz);
 
-  --txt-color-1: #599d29;
+  --txt-color-1: var(--fun-green);
   --txt-color-2: rgb(236, 150, 21);
-  --txt-color-3: #94B526;
+  --txt-color-3: var(--lfun-green);
 
-  --fontFamily: 'VT323', monospace;
+  --border-color: rgb(39, 3, 27);
+
+  --fontFamily: "VT323", monospace;
   --fontFamily2: notJam13;
 }
 
@@ -28,30 +25,41 @@ body {
 /* --header---------------------------------------------- */
 
 header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: var(--bg-color-1);
+
+  background-color: var(--bg-colorTrs);
   z-index: 1;
 }
 
 header:hover {
-  background-color: var(--bg-color-3);
+  background-color: var(--bg-color-1);
+  transition: 0.3s ease;
 }
 
 .menu {
+  height: 10vh;
   padding-left: 2%;
 }
 
 .menu__btns {
   color: var(--txt-color-2);
+  text-transform: uppercase;
 }
 
 /* --main---------------------------------------------- */
 
+h3,
+h2,
+h1 {
+  margin: 1rem 0;
+}
+
 .container {
   height: 200vh;
   width: 100vw;
-  
+
   box-sizing: border-box;
   position: relative;
 }
@@ -61,7 +69,7 @@ header:hover {
   position: sticky;
   top: 0;
 
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .container__box {
@@ -69,10 +77,10 @@ header:hover {
   width: 85%;
   margin: 5% 0 2% 15%;
   box-sizing: border-box;
-  
+
   position: absolute;
   top: 0;
-  
+
   display: flex;
   justify-content: space-evenly;
 }
@@ -84,7 +92,9 @@ header:hover {
   box-sizing: border-box;
 
   background-color: rgba(0, 0, 0, 0.25);
-  border-radius: .125rem;
+
+  border: 2px solid var(--border-color);
+  border-radius: 0.125rem;
 
   overflow: hidden scroll;
   scrollbar-color: var(--txt-color-1) transparent;
@@ -99,7 +109,7 @@ header:hover {
 }
 
 .content__paragraph::first-letter {
-  padding-left: .3em;
+  padding-left: 0.3em;
   text-transform: capitalize;
 }
 
@@ -125,7 +135,7 @@ header:hover {
 }
 
 .list dd {
-  font-size: .8em;
+  font-size: 0.8em;
   color: var(--txt-color-3);
 }
 
@@ -133,8 +143,10 @@ header:hover {
   width: 20%;
   height: fit-content;
   padding: 1em 1.5em;
-  background-color: rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
+
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--border-color);
 
   display: flex;
   justify-content: center;
@@ -157,7 +169,11 @@ header:hover {
 
 .b {
   font: 700 1.5rem var(--fontFamily2);
-  background: -webkit-linear-gradient(right, var(--txt-color-1) 1%, var(--txt-color-2) 100%);
+  background: -webkit-linear-gradient(
+    right,
+    var(--txt-color-1) 1%,
+    var(--txt-color-2) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -170,15 +186,24 @@ footer {
 }
 
 .socials {
-  width: 100%;
-  height: 15%;
-  margin-bottom: 5%;
+  height: 60%;
+  padding: 1em 3em;
   box-sizing: border-box;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.socials--links {
+  padding: 0.25em 1em;
+  box-sizing: border-box;
+}
+
+.socials--links:hover {
+  background-color: var(--bg-colorTrs);
+  border: 1px solid var(--border-color);
+  transition: 0.5s ease-in;
 }
 
 .imgWrapper {
@@ -246,9 +271,12 @@ footer {
 /* ---------------------mobile--------------------- */
 
 @media only screen and (max-width: 1200px) {
-
   body {
     font: 400 1.25rem/110% var(--fontFamily);
+  }
+
+  header {
+    background-color: var(--bg-color-1);
   }
 
   .menu {
@@ -265,11 +293,11 @@ footer {
   .container__box {
     height: 60%;
     margin: 0;
-    
+
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    
+
     flex-flow: row wrap;
     justify-content: center;
   }
@@ -278,14 +306,20 @@ footer {
     width: 100%;
     height: 60%;
     padding: 1em;
-    
+
     background-color: rgba(20, 20, 20, 0.4);
   }
-    
+
   .box__lateral {
     width: fit-content;
     height: fit-content;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     background-color: rgba(20, 20, 20, 0.4);
+  }
+
+  .socials {
+    margin-bottom: 1.5em;
+    padding: 0 2rem;
+    flex-wrap: wrap;
   }
 }
