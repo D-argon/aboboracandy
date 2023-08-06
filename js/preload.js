@@ -7,8 +7,8 @@ const images = [
   "imgs/pixelizer/celeste.jpeg",
   "imgs/pixelizer/flowey1.jpeg",
   "imgs/pixelizer/flowey2.jpg",
-  "imgs/bttn/mundo64.gif",
-  "imgs/bttn/wanwan.png",
+  "imgs/pixelizer/mundo64.gif",
+  "imgs/pixelizer/wanwan.png",
 ];
 
 for (const image of images) {

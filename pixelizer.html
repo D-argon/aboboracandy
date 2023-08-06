@@ -29,7 +29,7 @@
         <div class="container__box__buttons" ondragstart="return false">
           <div class="btn-div">
             <img
-              class="btn-div__btn"
+              class="btn-div__img"
               id="bstrwbrry"
               src="imgs/pixelizer/Strawberry.png"
               alt="strawberry.jpeg"
@@ -38,7 +38,7 @@
           </div>
           <div class="btn-div">
             <img
-              class="btn-div__btn"
+              class="btn-div__img"
               id="flower"
               src="imgs/pixelizer/floweyOvrw.png"
               alt="flower.jpeg"
@@ -49,39 +49,38 @@
           </div>
           <div class="btn-div">
             <a
-              class="btn-div__btn"
+              class="btn-div__img"
               href="https://freckleskies.neocities.org"
               title="between the clouds, a path"
               target="_blank"
             >
               <img
-                class="btn-div__btn--img"
-                id="freckle"
-                src="imgs/bttn/mundo64.gif"
+                height="64"
+                src="imgs/pixelizer/mundo64.gif"
                 alt="clouds.html"
+                id="freckle"
               />
             </a>
             <h2 class="btn-div__title">clouds.html</h2>
           </div>
           <div class="btn-div">
             <a
-              class="btn-div__btn"
+              class="btn-div__img"
               href="https://rgbteahouse.neocities.org"
               title="From the belvedere once seen in a dream, the railway to anywhere lies ahead."
               target="_blank"
             >
               <img
-                class="btn-div__btn--img"
-                id="pJ"
-                src="imgs/bttn/wanwan.png"
+                src="imgs/pixelizer/wanwan.png"
                 alt="Maison de thé.html"
+                id="pJ"
               />
             </a>
             <h2 class="btn-div__title">Maison de thé.html</h2>
           </div>
-          <div class="btn-div txtico">
+          <div class="btn-div txtico" id="txtico">
             <img
-              class="btn-div__btn--img"
+              class="btn-div__img"
               src="imgs/pixelizer/txtico.png"
               alt="to do.txt"
             />
@@ -89,7 +88,14 @@
           </div>
         </div>
         <div class="dragbox" id="pixelizer-dragbox">
-          <h2 class="dragbox__header">Pixelizer</h2>
+          <div class="dragbox__top">
+            <h2 class="dragbox__header">Pixelizer</h2>
+            <div class="dragbox__options">
+              <div class="header__options-btns">_</div>
+              <div class="header__options-btns">[]</div>
+              <div class="header__options-btns" id="dragbox-close">X</div>
+            </div>
+          </div>
           <div class="dragbox__content">
             <canvas id="pixelizer">
               Your browser doesn't support canvas
@@ -97,20 +103,21 @@
           </div>
         </div>
         <div class="dragbox" id="doc-txt">
-          <h2 class="dragbox__header">Todo.txt</h2>
+          <div class="dragbox__top">
+            <h2 class="dragbox__header">Todo.txt</h2>
+            <div class="dragbox__options">
+              <div class="header__options-btns">_</div>
+              <div class="header__options-btns">[]</div>
+              <div class="header__options-btns" id="dragbox-close">X</div>
+            </div>
+          </div>
           <div class="dragbox__content txtdoc">
             <ul>
               <p class="txt-line">plannings...</p>
               <br />
-              <div class="txt-line">
-                <li class="done caps">logs</li>
-              </div>
-              <div class="txt-line">
-                <li class="done">to do.txt</li>
-              </div>
-              <div class="txt-line">
-                <li class="done">About.html</li>
-              </div>
+              <li class="txt-line done caps">logs</li>
+              <li class="txt-line done">to do.txt</li>
+              <li class="txt-line done">About.html</li>
               <div class="txt-line">
                 <li>About.html 1.0</li>
                 <img
@@ -130,9 +137,7 @@
                   title="Working on!"
                 />
               </div>
-              <div class="txt-line done">
-                <li>clock</li>
-              </div>
+              <li class="txt-line done">clock</li>
               <div class="txt-line">
                 <li>Journal.html</li>
                 <img
@@ -153,16 +158,16 @@
                   title="Up next"
                 />
               </div>
+              <li class="txt-line done">mobile port</li>
+              <li class="txt-line done">links.html</li>
               <div class="txt-line">
-                <li class="done">mobile port</li>
-              </div>
-              <div class="txt-line">
-                <li>links.html</li>
+                <li>Gallery.html</li>
                 <img
-                  src="imgs/pixelizer/krillyico.gif"
-                  alt="currently working"
+                  class="krillyicoN"
+                  src="imgs/pixelizer/krillyico.png"
+                  alt="Up next."
                   width="24"
-                  title="Working on!"
+                  title="Up next"
                 />
               </div>
             </ul>

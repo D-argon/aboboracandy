@@ -11,9 +11,17 @@
   --white: #fff;
   --fun-green: #599d29;
   --lfun-green: #599d29;
+  --orange: #ec9615;
 
   --fontFamily: 'VT323', monospace;
   --fontFamily2: notJam13;
+}
+
+body {
+  background-color: var(--d-mag);
+  color: var(--fun-green);
+
+  font: 400 1rem/150% "VT323", monospace;
 }
 
 .container {

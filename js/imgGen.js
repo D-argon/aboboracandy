@@ -118,12 +118,8 @@
 
     const celesteImageData = await loadImgData(celesteImageSrc);
     const celesteMatrix = crtPxMatrix(celesteImageData, 32);
-    strwbrry.addEventListener("click", () => {
-      strwbrry.classList.add("clicked");
+    strwbrry.addEventListener("dblclick", () => {
       drwPxMatrix(celesteMatrix, ctx, 32);
-      setTimeout(() => {
-        strwbrry.classList.remove("clicked");
-      }, 150);
     });
 
     const floweyImageData = await loadImgData(floweyImageSrc);
@@ -139,7 +135,7 @@
     }
 
     addHoverEvent(flower, smileSrc, aliveSrc);
-    flower.addEventListener("click", () => {
+    flower.addEventListener("dblclick", () => {
       flower.classList.add("clicked");
       flower.src = deadSrc;
       const floweyMatrix = crtPxMatrix(getRndmImgData(), 16);

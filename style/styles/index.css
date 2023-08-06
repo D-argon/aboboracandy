@@ -24,8 +24,7 @@
 }
 
 body {
-  font-family: var(--fontFamily);
-  font-size: 1rem;
+  font: 400 1rem/150% var(--fontFamily);
 
   background-color: var(--bg-color-1);
   color: var(--txt-color-1);
@@ -65,7 +64,6 @@ body {
 }
 
 .clock {
-  width: 100%;
   text-align: center;
   display: flex;
   flex-flow: column wrap;
@@ -76,9 +74,12 @@ body {
   font-size: 4em;
 }
 
+.clock__date {
+  margin: 2em 0;
+}
+
 .clock__txt {
   font-size: 1.25em;
-  margin-top: 2em;
 }
 
 .links {
@@ -155,7 +156,7 @@ body {
 }
 
 .entries__item {
-  margin-top: 2%;
+  margin: 3% 0;
 }
 
 .entries__link {
@@ -285,7 +286,6 @@ ul {
 }
 
 /* ---------------------mobile--------------------- */
-/* FIXME */
 @media only screen and (max-width: 1200px) {
   .menu {
     overflow-x: scroll;
@@ -302,12 +302,16 @@ ul {
   }
 
   .logbox__list {
-    max-height: 30%;
+    max-height: 40%;
   }
 
   .entry-date__btn:checked ~ .entries {
     display: block;
     top: 0;
     right: 10%;
+  }
+
+  .clock {
+    margin-top: 30%;
   }
 }

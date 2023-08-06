@@ -6,20 +6,13 @@
   --bg-colorTrs: rgba(53, 21, 38, .6zz);
 
   --txt-color-1: var(--fun-green);
-  --txt-color-2: rgb(236, 150, 21);
+  --txt-color-2: var(--orange);
   --txt-color-3: var(--lfun-green);
 
   --border-color: rgb(39, 3, 27);
 
   --fontFamily: "VT323", monospace;
   --fontFamily2: notJam13;
-}
-
-body {
-  background-color: var(--bg-color-1);
-  color: var(--txt-color-1);
-
-  font: 400 1.5rem/110% var(--fontFamily);
 }
 
 /* --header---------------------------------------------- */
