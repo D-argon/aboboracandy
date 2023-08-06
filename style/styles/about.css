@@ -15,6 +15,10 @@
   --fontFamily2: notJam13;
 }
 
+body {
+  font-size: 1.5em;
+}
+
 /* --header---------------------------------------------- */
 
 header {
