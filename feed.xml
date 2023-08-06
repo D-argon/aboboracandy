@@ -15,22 +15,22 @@
 
         <image>
             <url>
-                https://aboboracandy.neocities.org/imgs/media/favicon.ico
+                https://aboboracandy.neocities.org/imgs/media/pixelizer/krillyico.gif
             </url>
             <title>aboboracandy</title>
             <link>https://aboboracandy.neocities.org</link>
-            <width>126</width>
-            <height>126</height>
+            <width>128</width>
+            <height>128</height>
         </image>
 
-        <lastBuildDate>Wed, 02 aug 2023 16:24:00 -0300</lastBuildDate>
+        <lastBuildDate>Wed, 05 Aug 2023 23:59:00 -0300</lastBuildDate>
 
         <docs>https://www.rssboard.org/rss-specification</docs>
         <item>
             <title>initial links.html</title>
             <description><![CDATA[<p>made some additional utilities for the modals at pixelizer and organized the links.html</p>]]></description>
 
-            <pubDate>Sat, 05 aug 2023 23:59:00 -0300</pubDate>
+            <pubDate>Sat, 05 Aug 2023 23:59:00 -0300</pubDate>
 
             <link>https://aboboracandy.neocities.org/pixelizer</link>
             <guid>https://aboboracandy.neocities.org/pixelizer</guid>
@@ -39,7 +39,7 @@
             <title>What time is it?</title>
             <description><![CDATA[<p>There's a brand new time display in the index and pixelizer pages!</p>]]></description>
 
-            <pubDate>Wed, 02 aug 2023 16:24:00 -0300</pubDate>
+            <pubDate>Wed, 02 Aug 2023 16:24:00 -0300</pubDate>
 
             <link>https://aboboracandy.neocities.org#clock</link>
             <guid>https://aboboracandy.neocities.org#clock</guid>
