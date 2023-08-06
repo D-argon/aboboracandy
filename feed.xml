@@ -27,6 +27,15 @@
 
         <docs>https://www.rssboard.org/rss-specification</docs>
         <item>
+            <title>initial links.html</title>
+            <description><![CDATA[<p>made some additional utilities for the modals at pixelizer and organized the links.html</p>]]></description>
+
+            <pubDate>Sat, 05 aug 2023 23:59:00 -0300</pubDate>
+
+            <link>https://aboboracandy.neocities.org/pixelizer</link>
+            <guid>https://aboboracandy.neocities.org/pixelizer</guid>
+        </item>
+        <item>
             <title>What time is it?</title>
             <description><![CDATA[<p>There's a brand new time display in the index and pixelizer pages!</p>]]></description>
 
