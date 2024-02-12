@@ -2,6 +2,8 @@ const dateGather = () => {
   return new Date();
 };
 
+const pageName = location.pathname;
+
 let txt = [
   "Welcome!",
   "Hey there",
@@ -116,8 +118,11 @@ function varTxtChck() {
     }
   }
 }
-varTxtChck();
-txtRndm();
+
+if (pageName.includes("index") || location.pathname === "/") {
+  varTxtChck();
+  txtRndm();
+}
 
 function chckTime(i) {
   if (i < 10) {
@@ -147,15 +152,15 @@ const tempo = () => {
   let m = date.getMinutes();
   let s = date.getSeconds();
 
-  //zero add
+  //add zero to single number time
   if (h < 10) {
     h = chckTime(h);
   }
   m = chckTime(m);
   s = chckTime(s);
 
-  //set right html
-  if (location.pathname === "/index.html" || location.pathname === "/") {
+  //check html for clock
+  if (pageName.includes("index") || pageName === "/") {
     clock.innerHTML = `<div class="clock__time">${h}:${m}:${s}</div>
                        <div class="clock__date">${new Intl.DateTimeFormat(
                          "en-GB",
@@ -173,18 +178,13 @@ const tempo = () => {
       }
     }
     clockD.textContent = clockD.textContent.replace(/,/gi, "");
-  } else if (location.pathname === "/pixelizer.html") {
+  } else if (pageName.includes("/pixelizer")) {
     clock.innerHTML = `<div class="clock__time">${new Intl.DateTimeFormat(
       undefined,
       options2
     ).format(date)}</div>`;
   }
 
-  //txt timer
-  if (s === 30 || s === "00") {
-    txtRndm();
-  };
-  
   setTimeout(tempo, 1000);
 };
 tempo();

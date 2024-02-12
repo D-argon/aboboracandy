@@ -27,6 +27,15 @@
 
         <docs>https://www.rssboard.org/rss-specification</docs>
         <item>
+            <title>hemlo i'm back</title>
+            <description><![CDATA[<p>scss revamp, some styles change annnnd minor additions/changes</p>]]></description>
+
+            <pubDate>Seg, 12 Feb 2024 12:55:00 -0300</pubDate>
+
+            <link>https://aboboracandy.neocities.org/pixelizer</link>
+            <guid>https://aboboracandy.neocities.org/pixelizer</guid>
+        </item>
+        <item>
             <title>initial links.html</title>
             <description><![CDATA[<p>made some additional utilities for the modals at pixelizer and organized the links.html</p>]]></description>
 

@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@font-face {
+  font-family: "notJam13";
+  src: local("NotJamBlkltr13"), url("../../fonts/notJam/NotJamBlkltr13.ttf");
+}
+@font-face {
+  font-family: "w95fa";
+  src: local("w95fa"), url("../../fonts/w95fa/W95.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "imb";
+  src: local("IBM_BIOS-2y"), url("../../fonts/ibm/IBM_BIOS-2y.woff");
+}
+@font-face {
+  font-family: "csans";
+  src: local("comic sans"), url("../../fonts/hehe/hehe.ttf");
+}
+@font-face {
+  font-family: "neue regrade";
+  src: local("Neue Regrade"), url("../../fonts/NeueRegrade/NeueRegradeRegular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "neue regrade";
+  src: local("Neue Regrade Light"), url("../../fonts/NeueRegrade/NeueRegradeLight.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "neue regrade";
+  src: local("Neue Regrade Bold"), url("../../fonts/NeueRegrade/NeueRegradeBold.otf");
+  font-weight: 700;
+}
+body {
+  background-color: #351526;
+  box-sizing: border-box;
+  color: #A5E0A4;
+  font: 400 1rem/150% "VT323", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #351526;
+}
+
+a {
+  background-color: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  margin: 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.container {
+  height: 80vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden--text {
+  opacity: 0;
+  position: relative;
+}
+.hidden--text:hover {
+  opacity: 1;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.under-l {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.l-through {
+  text-decoration: line-through;
+}
+
+.menu {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  gap: 5%;
+  height: 10vh;
+  position: relative;
+  z-index: 1;
+}
+.menu__btns {
+  color: #ec9615;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu--on {
+  cursor: default;
+}
+
+body {
+  background-color: #141414;
+  color: rgb(51, 255, 0);
+  font: 400 1rem/1.5 imb;
+}
+
+.crt {
+  animation: textShadow 1.5s linear infinite;
+}
+.crt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(40, 40, 40, 0.1), rgba(0, 0, 0, 0.7));
+  background-size: 100% 3px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scans 15s linear infinite;
+}
+
+::-moz-selection {
+  background-color: rgba(51, 255, 0, 0.5);
+}
+
+::selection {
+  background-color: rgba(51, 255, 0, 0.5);
+}
+
+header {
+  background-color: #141414;
+}
+header .menu__btns {
+  color: rgb(51, 255, 0);
+}
+header .menu--click:hover {
+  color: rgb(51, 155, 0);
+  transform: translate(0.1px, 2px);
+}
+header .menu--on {
+  color: rgb(51, 155, 0);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.container .clock {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.container .clock__date {
+  margin: 0 0 2em;
+}
+.container .clock__time {
+  font-size: 4em;
+}
+.container .clock__txt {
+  font-size: 1.25em;
+}
+.container .logbox {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1%;
+  width: 20%;
+}
+.container .logbox__title {
+  box-sizing: border-box;
+  color: inherit;
+  font-size: 1.25rem;
+  margin: 0;
+  padding-left: 5%;
+  text-decoration: none;
+}
+.container .logbox hr {
+  border-width: 2px;
+  border-color: rgb(51, 255, 0);
+  margin: 1em 0 0;
+  width: 75%;
+}
+.container .logbox__list {
+  font-size: 1rem;
+  max-height: 85%;
+  overflow-y: scroll;
+  padding: 10% 0;
+  scrollbar-color: transparent transparent;
+}
+.container .logbox__list ul {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.container .logbox__list ul .entry-date__btn {
+  display: none;
+}
+.container .logbox__list ul .entry-date label {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.container .logbox__list ul .entry-date .entries {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  background-color: #141414;
+  border: 1px solid rgb(51, 255, 0);
+  font-size: 1em;
+  letter-spacing: 2px;
+  line-height: 140%;
+  max-height: 25vh;
+  overflow-y: scroll;
+  padding: 5% 2% 5% 0;
+  scrollbar-color: transparent transparent;
+  width: 110%;
+}
+.container .logbox__list ul .entry-date .entries__item {
+  margin: 3% 0;
+}
+.container .logbox__list ul .entry-date .entries__link {
+  color: rgb(255, 176, 0);
+  animation: textShadowAlt 1.5s linear infinite;
+}
+.container .logbox__list ul .entry-date .entries .small {
+  font-size: 0.75em;
+  letter-spacing: normal;
+  line-height: 1;
+}
+.container .links {
+  text-decoration: none;
+  color: rgb(255, 176, 0);
+  animation: textShadowAlt 1.5s linear infinite;
+}
+.container .links::-moz-selection {
+  background-color: rgba(232, 140, 12, 0.5);
+}
+.container .links::selection {
+  background-color: rgba(232, 140, 12, 0.5);
+}
+
+.footer__title {
+  text-align: center;
+}
+
+/* ------------------------- animation -- */
+@keyframes scans {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px 3px;
+  }
+}
+@keyframes ghost {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.5px 0 1px rgba(51, 255, 0, 0.5), -0.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px rgba(51, 255, 0, 0.5), -1.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px rgba(51, 255, 0, 0.5), -0.1px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px rgba(51, 255, 0, 0.5), -2px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px rgba(51, 255, 0, 0.5), -2.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px rgba(51, 255, 0, 0.5), 0 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+}
+@keyframes textShadowAlt {
+  0% {
+    text-shadow: 0.5px 0 1px rgba(232, 140, 12, 0.5), -0.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px rgba(232, 140, 12, 0.5), -1.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px rgba(232, 140, 12, 0.5), -0.1px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px rgba(232, 140, 12, 0.5), -2px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px rgba(232, 140, 12, 0.5), -2.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px rgba(232, 140, 12, 0.5), 0 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+}
+/* ------------------------ mobile -- */
+@media only screen and (max-width: 1200px) {
+  .menu {
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+  }
+  .clock {
+    margin-top: 30%;
+  }
+  .logbox {
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%);
+    height: 35%;
+    width: 60vw;
+  }
+  .logbox hr {
+    width: 100%;
+  }
+  .logbox__list {
+    max-height: 50%;
+    padding: 0;
+  }
+  .logbox__list .entry-date__btn:checked ~ .entries {
+    display: block;
+    top: 0;
+    right: 10%;
+  }
+}/*# sourceMappingURL=index.css.map */

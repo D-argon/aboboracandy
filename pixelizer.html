@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="js/handleError.js" defer></script>
-    <script src="js/preload.js" defer></script>
-    <link href="/imgs/favicon.ico?v=4" rel="icon" type="image/x-icon" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="style/normalize.css" />
-    <link href="style/styles/canvas.css" rel="stylesheet" />
-    <title>Pixeltron 32000</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="menu" ondragstart="return false">
-        <a href="." class="menu__btns menu--click">Home</a>
-        <a href="about.html" class="menu__btns menu--click">About</a>
-        <h1 class="menu__btns menu--on">Pixeltron</h1>
-        <a href="links.html" class="menu__btns menu--click">Links</a>
-      </nav>
-      <div id="clock" class="clock"></div>
-    </header>
-    <main class="container">
-      <p class="text">found something malfunctioning? let me know</p>
-      <div class="container__box">
-        <div class="container__box__buttons" ondragstart="return false">
-          <div class="btn-div">
+  <script src="js/handleError.js" defer></script>
+  <script src="js/preload.js" defer></script>
+  <link href="/imgs/favicon.ico?v=4" rel="icon" type="image/x-icon" />
+
+  <link rel="stylesheet" href="style/pages/pixelizer.css" />
+  <title>Doors 96</title>
+</head>
+
+<body>
+  <header>
+    <nav class="menu" ondragstart="return false">
+      <a href="." class="menu__btns menu--click">home</a>
+      <a href="about.html" class="menu__btns menu--click">about</a>
+      <h1 class="menu__btns menu--on">pixelizer</h1>
+      <a href="links.html" class="menu__btns menu--click">links</a>
+    </nav>
+    <div id="clock" class="clock"></div>
+  </header>
+  <main class="container">
+    <div class="container__box">
+      <div class="container__box__buttons" ondragstart="return false">
+        <!-- <div class="btn-div">
             <img
               class="btn-div__img"
               id="bstrwbrry"
@@ -46,138 +46,89 @@
             <h2 class="btn-div__title flower--title">
               Flowey.jpeg<span class="hidden--text">.fun</span>
             </h2>
-          </div>
-          <div class="btn-div">
-            <a
-              class="btn-div__img"
-              href="https://freckleskies.neocities.org"
-              title="between the clouds, a path"
-              target="_blank"
-            >
-              <img
-                height="64"
-                src="imgs/pixelizer/mundo64.gif"
-                alt="clouds.html"
-                id="freckle"
-              />
-            </a>
-            <h2 class="btn-div__title">clouds.html</h2>
-          </div>
-          <div class="btn-div">
-            <a
-              class="btn-div__img"
-              href="https://rgbteahouse.neocities.org"
-              title="From the belvedere once seen in a dream, the railway to anywhere lies ahead."
-              target="_blank"
-            >
-              <img
-                src="imgs/pixelizer/wanwan.png"
-                alt="Maison de thé.html"
-                id="pJ"
-              />
-            </a>
-            <h2 class="btn-div__title">Maison de thé.html</h2>
-          </div>
-          <div class="btn-div txtico" id="txtico">
-            <img
-              class="btn-div__img"
-              src="imgs/pixelizer/txtico.png"
-              alt="to do.txt"
-            />
-            <h2 class="btn-div__title">Todo.txt</h2>
-          </div>
+          </div> -->
+        <div class="btn-div">
+          <a class="btn-div__img" href="https://freckleskies.neocities.org" title="between the clouds, a path"
+            target="_blank">
+            <img height="64" src="imgs/pixelizer/mundo64.gif" alt="clouds.html" id="freckle" />
+          </a>
+          <h2 class="btn-div__title">clouds.html</h2>
         </div>
-        <div class="dragbox" id="pixelizer-dragbox">
-          <div class="dragbox__top">
-            <h2 class="dragbox__header">Pixelizer</h2>
-            <div class="dragbox__options">
-              <div class="header__options-btns">_</div>
-              <div class="header__options-btns">[]</div>
-              <div class="header__options-btns" id="dragbox-close">X</div>
-            </div>
-          </div>
-          <div class="dragbox__content">
-            <canvas id="pixelizer">
-              Your browser doesn't support canvas
-            </canvas>
-          </div>
+        <div class="btn-div">
+          <a class="btn-div__img" href="https://rgbteahouse.neocities.org"
+            title="From the belvedere once seen in a dream, the railway to anywhere lies ahead." target="_blank">
+            <img src="imgs/pixelizer/wanwan.png" alt="Maison de thé.html" id="pJ" />
+          </a>
+          <h2 class="btn-div__title">Maison de thé.html</h2>
         </div>
-        <div class="dragbox" id="doc-txt">
-          <div class="dragbox__top">
-            <h2 class="dragbox__header">Todo.txt</h2>
-            <div class="dragbox__options">
-              <div class="header__options-btns">_</div>
-              <div class="header__options-btns">[]</div>
-              <div class="header__options-btns" id="dragbox-close">X</div>
-            </div>
-          </div>
-          <div class="dragbox__content txtdoc">
-            <ul>
-              <p class="txt-line">plannings...</p>
-              <br />
-              <li class="txt-line done caps">logs</li>
-              <li class="txt-line done">to do.txt</li>
-              <li class="txt-line done">About.html</li>
-              <div class="txt-line">
-                <li>About.html 1.0</li>
-                <img
-                  class="krillyicoN"
-                  src="imgs/pixelizer/krillyico.png"
-                  alt="Up next."
-                  width="24"
-                  title="Up next"
-                />
-              </div>
-              <div class="txt-line">
-                <li>better modals (windows)</li>
-                <img
-                  src="imgs/pixelizer/krillyico.gif"
-                  alt="currently working"
-                  width="24"
-                  title="Working on!"
-                />
-              </div>
-              <li class="txt-line done">clock</li>
-              <div class="txt-line">
-                <li>Journal.html</li>
-                <img
-                  class="krillyicoN"
-                  src="imgs/pixelizer/krillyico.png"
-                  alt="Up next."
-                  width="24"
-                  title="Up next"
-                />
-              </div>
-              <div class="txt-line">
-                <li>user interaction !</li>
-                <img
-                  class="krillyicoN"
-                  src="imgs/pixelizer/krillyico.png"
-                  alt="Up next."
-                  width="24"
-                  title="Up next"
-                />
-              </div>
-              <li class="txt-line done">mobile port</li>
-              <li class="txt-line done">links.html</li>
-              <div class="txt-line">
-                <li>Gallery.html</li>
-                <img
-                  class="krillyicoN"
-                  src="imgs/pixelizer/krillyico.png"
-                  alt="Up next."
-                  width="24"
-                  title="Up next"
-                />
-              </div>
-            </ul>
-          </div>
+        <div class="btn-div txtico" id="txtico">
+          <img class="btn-div__img" src="imgs/pixelizer/txtico.png" alt="to do.txt" />
+          <h2 class="btn-div__title">Todo.txt</h2>
         </div>
       </div>
-    </main>
-    <footer></footer>
-    <script src="js/clock.js"></script>
-    <script src="js/imgGen.js"></script>
-    <script src="js/dragger.js"></script>
-  </body>
+      <div class="dragbox" id="pixelizer-dragbox">
+        <div class="dragbox__top">
+          <h2 class="dragbox__top--header">Pixelizer</h2>
+          <div class="dragbox__top--options">
+            <div class="dragbox__top--options__btns">_</div>
+            <div class="dragbox__top--options__btns">[]</div>
+            <div class="dragbox__top--options__btns" id="dragbox-close">X</div>
+          </div>
+        </div>
+        <div class="dragbox__content">
+          <canvas id="pixelizer">
+            Your browser doesn't support canvas
+          </canvas>
+        </div>
+      </div>
+      <div class="dragbox" id="doc-txt">
+        <div class="dragbox__top">
+          <h2 class="dragbox__top--header">Todo.txt</h2>
+          <div class="dragbox__top--options">
+            <div class="dragbox__top--options__btns">_</div>
+            <div class="dragbox__top--options__btns">[]</div>
+            <div class="dragbox__top--options__btns" id="dragbox-close">X</div>
+          </div>
+        </div>
+        <div class="dragbox__content txtdoc">
+          <ul>
+            <p class="txt-line">plannings...</p>
+            <br />
+            <li class="txt-line done caps">logs</li>
+            <li class="txt-line done">to do.txt</li>
+            <li class="txt-line done">About.html</li>
+            <div class="txt-line">
+              <li>About.html 1.0</li>
+              <img class="krillyicoN" src="imgs/pixelizer/krillyico.png" alt="Up next." width="24" title="Up next" />
+            </div>
+            <div class="txt-line">
+              <li>better modals (windows)</li>
+              <img src="imgs/pixelizer/krillyico.gif" alt="currently working" width="24" title="Working on!" />
+            </div>
+            <li class="txt-line done">clock</li>
+            <div class="txt-line">
+              <li>Journal.html</li>
+              <img class="krillyicoN" src="imgs/pixelizer/krillyico.png" alt="Up next." width="24" title="Up next" />
+            </div>
+            <div class="txt-line">
+              <li>user interaction !</li>
+              <img class="krillyicoN" src="imgs/pixelizer/krillyico.png" alt="Up next." width="24" title="Up next" />
+            </div>
+            <li class="txt-line done">mobile port</li>
+            <li class="txt-line done">links.html</li>
+            <div class="txt-line">
+              <li>Gallery.html</li>
+              <img class="krillyicoN" src="imgs/pixelizer/krillyico.png" alt="Up next." width="24" title="Up next" />
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="js/clock.js"></script>
+  <script src="js/imgGen.js"></script>
+  <script src="js/dragger.js"></script>
+</body>
+
 </html>
