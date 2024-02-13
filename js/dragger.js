@@ -55,38 +55,54 @@ function bringFront() {
 // ---------------------- close/open ---------------
 
 const container = document.querySelector(".container__box");
-const txtico = document.getElementById("txtico");
-const doctxtHTML = document.getElementById("doc-txt").innerHTML;
+const txtico = document.getElementsByClassName("txtico");
 
-let isOpen = true;
+const txtToDo = document.getElementById("txtToDo");
+const txtJournal = document.getElementById("txtJournal");
+
+txtJournal.classList.remove("hidden");
+const txtJournalHTML = document.getElementById("txtJournal").innerHTML;
+txtJournal.classList.add("hidden");
+
+const txtToDoHTML = document.getElementById("txtToDo").innerHTML;
+
+let isToDoOpen = true;
+let isJournalOpen = false;
+
 //close/open modal
 // Attach click event listener to a common ancestor element
 container.addEventListener("dblclick", (e) => {
-  // Check if the clicked element has the class "txtico"
-  if (e.target.parentElement.getAttribute("id") === "txtico") {
-    toggleTxtBox();
+  // Check dblclicked parent's id
+  if (e.target.parentElement.getAttribute("id") === "toDoIco") {
+    toggleTxtToDo();
+  } else if (e.target.parentElement.getAttribute("id") === "journalIco") {
+    toggleTxtJournal();
   }
   rmAllActive();
 });
 
 container.addEventListener("click", (e) => {
-  // Check if the clicked element has the class "txtico"
-  if (e.target.parentElement.classList.contains("btn-div")) {
+  const eParent = e.target.parentElement;
+  const btnsDragbox = e.target.parentElement.parentElement.parentElement;
+
+  // Check clicked parent's class
+  if (eParent.classList.contains("btn-div")) {
     rmAllActive();
-    e.target.parentElement.classList.add("iconActive");
-  } else if (!e.target.parentElement.classList.contains("btn-div")) {
+    eParent.classList.add("iconActive");
+  } else if (!eParent.classList.contains("btn-div")) {
     rmAllActive();
   }
 
   if (e.target.getAttribute("id") === "dragbox-close") {
-    if (
-      e.target.parentElement.parentElement.parentElement.getAttribute("id") ===
-      "pixelizer-dragbox"
-    ) {
+    if (btnsDragbox.getAttribute("id") === "pixelizer-dragbox") {
       alert(">:(");
     } else {
-      e.target.parentElement.parentElement.parentElement.remove();
-      isOpen = false;
+      btnsDragbox.remove();
+      if (btnsDragbox.getAttribute("id") === "txtToDo") {
+        isToDoOpen = false;
+      } else if (btnsDragbox.getAttribute("id") === "txtJournal") {
+        isJournalOpen = false;
+      }
     }
   }
 });
@@ -97,14 +113,29 @@ function rmAllActive() {
   });
 }
 
-function toggleTxtBox() {
-  if (!isOpen) {
-    isOpen = true;
+function toggleTxtToDo() {
+  if (!isToDoOpen) {
+    isToDoOpen = true;
     let newDoctxt = document.createElement("div");
-    newDoctxt.innerHTML = doctxtHTML;
+    newDoctxt.innerHTML = txtToDoHTML;
 
     container.appendChild(newDoctxt);
-    newDoctxt.setAttribute("id", "doc-txt");
+    newDoctxt.setAttribute("id", "txtToDo");
+    newDoctxt.classList.add("dragbox");
+
+    dragElement(newDoctxt); //add to listener
+    newDoctxt.addEventListener("mousedown", bringFront);
+  }
+}
+
+function toggleTxtJournal() {
+  if (!isJournalOpen) {
+    isJournalOpen = true;
+    let newDoctxt = document.createElement("div");
+    newDoctxt.innerHTML = txtJournalHTML;
+
+    container.appendChild(newDoctxt);
+    newDoctxt.setAttribute("id", "txtJournal");
     newDoctxt.classList.add("dragbox");
 
     dragElement(newDoctxt); //add to listener

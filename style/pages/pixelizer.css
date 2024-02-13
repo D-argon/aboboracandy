@@ -338,6 +338,15 @@ header .clock {
   color: black;
   display: flex;
   margin: 0 1px;
+  gap: 1em;
+}
+.dragbox__content--txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.dragbox__content--txt .links {
+  color: blue;
 }
 
 #pixelizer-dragbox {
@@ -349,26 +358,37 @@ header .clock {
   height: 100%;
 }
 
-#doc-txt {
+#txtToDo {
   width: 15vw;
   transform: translate(150%, -5%);
 }
 
 .txtdoc {
+  display: flex;
+  flex-direction: column;
   max-height: 35vh;
+  padding: 1em 1.5em;
   overflow-y: scroll;
 }
-
-.txt-line {
-  list-style: disc;
-  max-width: 80%;
+.txtdoc ul {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 1em;
   gap: 2%;
 }
-
-.krillyicoN {
+.txtdoc ul .txt-line, .txtdoc ul li {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+}
+.txtdoc ul .txt-line .krillyicoN, .txtdoc ul li .krillyicoN {
   opacity: 0.5;
+  margin-left: 1em;
+}
+.txtdoc ul li::before {
+  content: "";
+  display: list-item;
 }
 
 /* ---------misc--------- */
@@ -384,7 +404,7 @@ header .clock {
 /* ---------------------mobile--------------------- */
 @media only screen and (max-width: 1200px) {
   body {
-    font: normal 1rem/120% var(--fontFamily);
+    font: normal 1rem/120% "w95fa", monospace;
   }
   .menu {
     gap: 1%;
@@ -421,7 +441,7 @@ header .clock {
   #pixelizer-dragbox {
     transform: translate(-30%, -80%);
   }
-  #doc-txt {
+  #txtToDo {
     width: 40vw;
     transform: translate(-9%, 7%);
   }
@@ -429,7 +449,7 @@ header .clock {
     padding-left: 1.3em;
     margin-top: 0.5em;
   }
-  .txt-line {
+  .txt-line, .txtdoc ul li {
     margin-top: 0.25em;
   }
 }/*# sourceMappingURL=pixelizer.css.map */

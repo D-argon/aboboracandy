@@ -193,6 +193,7 @@ header .menu {
 }
 .container__box .content__title {
   font: 700 1.75em/50% "VT323", monospace;
+  position: relative;
 }
 .container__box .content__title .b {
   font: 700 1.5rem "notJam13", monospace;
@@ -200,6 +201,10 @@ header .menu {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.container__box .content__title .cough {
+  position: relative;
+  left: -13px;
 }
 .container__box .content__paragraph {
   padding-left: 1em;
