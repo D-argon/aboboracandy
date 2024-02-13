@@ -14,4 +14,4 @@ aboboracandy.code-workspace
 
 /style/components
 
-/style/_*
+/style/*.scss
