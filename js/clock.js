@@ -13,7 +13,7 @@ let txt = [
   "i'm not in Agora Road",
   "a Neocities district",
   "Present Day",
-  "Hii Nina!!",
+  'Omg <a class="links" href="/nina.html">Nina</a> Hiii!!',
   "Miku approved website",
   '<a class="links" href="https://open.spotify.com/track/1y0gwA03lGnTMB6f8LH187?si=ae21d30e9b664cde" target="_blank">Ants that raised their head like hounds</a>',
   "Present Time",

@@ -363,6 +363,10 @@ header .clock {
   transform: translate(150%, -5%);
 }
 
+#txtJournal {
+  width: 35vw;
+}
+
 .txtdoc {
   display: flex;
   flex-direction: column;

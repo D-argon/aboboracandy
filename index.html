@@ -1,202 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/imgs/media/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-  <link href="/imgs/media/favicon.ico" rel="icon" type="image/x-icon" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/pages/index.css" />
+    <title>aboboracandy</title>
+  </head>
 
-  <link rel="stylesheet" href="style/pages/index.css" />
-  <title>aboboracandy</title>
-</head>
-
-<body class="crt">
-  <header>
-    <nav class="menu" ondragstart="return false;">
-      <span class="menu__btns menu--on" title="You're already home...  aren't you?">
-        /home
-      </span>
-      <a href="about.html" class="menu__btns menu--click"> /about</a>
-      <a href="pixelizer.html" class="menu__btns menu--click"> /pixelizer</a>
-      <a href="links.html" class="menu__btns menu--click"> /links</a>
-    </nav>
-  </header>
-  <main class="container">
-    <!-- <div class="box">
+  <body class="crt">
+    <header>
+      <nav class="menu" ondragstart="return false;">
+        <span
+          class="menu__btns menu--on"
+          title="You're already home...  aren't you?"
+        >
+          /home
+        </span>
+        <a href="about.html" class="menu__btns menu--click"> /about</a>
+        <a href="pixelizer.html" class="menu__btns menu--click"> /pixelizer</a>
+        <a href="links.html" class="menu__btns menu--click"> /links</a>
+      </nav>
+    </header>
+    <main class="container">
+      <!-- <div class="box">
         <h1 class="title">Under coding<span class="ghost">_</span></h1>
       </div> -->
-    <div class="logbox">
-      <h2 class="caps">
-        <a href="feed.xml" class="logbox__title">logs</a>
-      </h2>
-      <hr>
-      <div class="logbox__list">
-        <ul>
-          <li>---</li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-050823" />
-            <label for="entry-050823"> 05|08|23 </label>
-            <div class="entries">
-              <ul>
-                <li class="entries__item">
-                  <a href="pixelizer.html" class="entries__link">pixelizer</a>
-                  improvements!;<br />
-                  <span class="small">it works now! (more than before that is)</span>
-                </li>
+      <div class="logbox">
+        <h2 class="caps">
+          <a href="feed.xml" class="logbox__title">logs</a>
+        </h2>
+        <hr />
+        <div class="logbox__list">
+          <ul>
+            <li>---</li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-050823"
+              />
+              <label for="entry-050823"> 05|08|23 </label>
+              <div class="entries">
+                <ul>
+                  <li class="entries__item">
+                    <a href="pixelizer.html" class="entries__link">pixelizer</a>
+                    improvements!;<br />
+                    <span class="small"
+                      >it works now! (more than before that is)</span
+                    >
+                  </li>
 
-                <li class="entries__item">
-                  <a href="links.html" class="entries__link">links</a>
-                  tidy'ed;
-                </li>
-                I'm starting to get overwhelmed...
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-020823" />
-            <label for="entry-020823"> 02|08|23 </label>
-            <div class="entries">
-              <ul>
-                clock 1.0
-                <li class="entries__item">
-                  finished the
-                  <a href="javascript:alert(`You're already at it.`);" class="entries__link">clocko</a>, added more
-                  txts, now it's at
-                  <a href="pixelizer.html" class="entries__link">pixelizer</a>
-                  too;
-                </li>
-                <li class="entries__item">
-                  <a href="links.html" class="entries__link">links</a>
-                  temporary layout done;
-                </li>
-                <li class="entries__item">mobile clock fix;</li>
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-300723" />
-            <label for="entry-300723"> 30|07|23 </label>
-            <div class="entries">
-              <ul>
-                slideToTheLeft.mp3
-                <li class="entries__item">
-                  there is a
-                  <a href="javascript:alert(`You're already at it.`);" class="entries__link">Cool Clock™</a>
-                  now;
-                </li>
-                <li class="entries__item">
-                  You should check
-                  <a href="not_found.html" class="entries__link" target="_blank">not_found.html</a>;
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-220723" />
-            <label for="entry-220723"> 22|07|23 </label>
-            <div class="entries">
-              <ul>
-                <li class="entries__item caps">
-                  we have a
-                  <a href="imgs/bttn/aboborabtn.gif" class="entries__link">site button</a>
-                  !!!!;
-                  <span class="small">could be more but I don't want to overwork it, shall I
-                    improve it in future</span>
-                </li>
-                <li class="entries__item">
-                  made a
-                  <a href="feed.xml" class="entries__link"><img
-                      src="https://validator.w3.org/feed/images/valid-rss-rogers.png" alt="RSS" height="25" /></a>;
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-160723" />
-            <label for="entry-160723"> 16|07|23 </label>
-            <div class="entries">
-              <ul>
-                <li class="entries__item">
-                  Mobile port!!!;<br />
-                  <span class="small">
-                    go on and hit that CTRL + M (if u r on firefox at
-                    least)</span>
-                </li>
-                <li class="entries__item">some general improvements;</li>
-                <li class="entries__item">
-                  fixed the <span class="caps">logs</span> checkbox and
-                  &#x3C;a&#x3E;'s textShadow animation :P;
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-080723" />
-            <label for="entry-080723"> 08|07|23 </label>
-            <div class="entries">
-              <ul>
-                <li class="entries__item">
-                  <a href="about.html" class="entries__link">About.html</a>
-                  glowup!!;
-                </li>
-                <li class="entries__item">
-                  general
-                  <a href="javascript:alert(`You're already at it.`);" class="entries__link">everywhere</a>
-                  tweaks (clean code, etc);
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-020723" />
-            <label for="entry-020723"> 02|07|23 </label>
-            <div class="entries">
-              <ul>
-                etobleh.png
-                <li class="entries__item">
-                  creation of
-                  <a href="pixelizer.html" class="entries__link">todo.txt</a>;
-                </li>
-                <li class="entries__item">
-                  general
-                  <a href="pixelizer.html" class="entries__link">pixelizer</a>
-                  tweaks (styles and img optimization);
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="entry-date">
-            <input type="checkbox" class="entry-date__btn" id="entry-010723" />
-            <label for="entry-010723"> 01|07|23 </label>
-            <div class="entries">
-              <ul>
-                <li class="entries__item">
-                  creation of
-                  <a href="javascript:alert(`You're already at it.`);" class="entries__link caps">logs</a>;
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>---</li>
-        </ul>
+                  <li class="entries__item">
+                    <a href="links.html" class="entries__link">links</a>
+                    tidy'ed;
+                  </li>
+                  I'm starting to get overwhelmed...
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-020823"
+              />
+              <label for="entry-020823"> 02|08|23 </label>
+              <div class="entries">
+                <ul>
+                  clock 1.0
+                  <li class="entries__item">
+                    finished the
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link"
+                      >clocko</a
+                    >, added more txts, now it's at
+                    <a href="pixelizer.html" class="entries__link">pixelizer</a>
+                    too;
+                  </li>
+                  <li class="entries__item">
+                    <a href="links.html" class="entries__link">links</a>
+                    temporary layout done;
+                  </li>
+                  <li class="entries__item">mobile clock fix;</li>
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-300723"
+              />
+              <label for="entry-300723"> 30|07|23 </label>
+              <div class="entries">
+                <ul>
+                  slideToTheLeft.mp3
+                  <li class="entries__item">
+                    there is a
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link"
+                      >Cool Clock™</a
+                    >
+                    now;
+                  </li>
+                  <li class="entries__item">
+                    You should check
+                    <a
+                      href="not_found.html"
+                      class="entries__link"
+                      target="_blank"
+                      >not_found.html</a
+                    >;
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-220723"
+              />
+              <label for="entry-220723"> 22|07|23 </label>
+              <div class="entries">
+                <ul>
+                  <li class="entries__item caps">
+                    we have a
+                    <a href="imgs/bttn/aboborabtn.gif" class="entries__link"
+                      >site button</a
+                    >
+                    !!!!;
+                    <span class="small"
+                      >could be more but I don't want to overwork it, shall I
+                      improve it in future</span
+                    >
+                  </li>
+                  <li class="entries__item">
+                    made a
+                    <a href="feed.xml" class="entries__link"
+                      ><img
+                        src="https://validator.w3.org/feed/images/valid-rss-rogers.png"
+                        alt="RSS"
+                        height="25" /></a
+                    >;
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-160723"
+              />
+              <label for="entry-160723"> 16|07|23 </label>
+              <div class="entries">
+                <ul>
+                  <li class="entries__item">
+                    Mobile port!!!;<br />
+                    <span class="small">
+                      go on and hit that CTRL + M (if u r on firefox at
+                      least)</span
+                    >
+                  </li>
+                  <li class="entries__item">some general improvements;</li>
+                  <li class="entries__item">
+                    fixed the <span class="caps">logs</span> checkbox and
+                    &#x3C;a&#x3E;'s textShadow animation :P;
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-080723"
+              />
+              <label for="entry-080723"> 08|07|23 </label>
+              <div class="entries">
+                <ul>
+                  <li class="entries__item">
+                    <a href="about.html" class="entries__link">About.html</a>
+                    glowup!!;
+                  </li>
+                  <li class="entries__item">
+                    general
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link"
+                      >everywhere</a
+                    >
+                    tweaks (clean code, etc);
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-020723"
+              />
+              <label for="entry-020723"> 02|07|23 </label>
+              <div class="entries">
+                <ul>
+                  etobleh.png
+                  <li class="entries__item">
+                    creation of
+                    <a href="pixelizer.html" class="entries__link">todo.txt</a>;
+                  </li>
+                  <li class="entries__item">
+                    general
+                    <a href="pixelizer.html" class="entries__link">pixelizer</a>
+                    tweaks (styles and img optimization);
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="entry-date">
+              <input
+                type="checkbox"
+                class="entry-date__btn"
+                id="entry-010723"
+              />
+              <label for="entry-010723"> 01|07|23 </label>
+              <div class="entries">
+                <ul>
+                  <li class="entries__item">
+                    creation of
+                    <a
+                      href="javascript:alert(`You're already at it.`);"
+                      class="entries__link caps"
+                      >logs</a
+                    >;
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>---</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div id="clock" class="clock"></div>
-  </main>
-  <footer>
-    <h1 class="footer__title caps">imb</h1>
-  </footer>
-  <script src="js/clock.js"></script>
-  <script src="js/logbox.js"></script>
-  <!-- <script>
+      <div id="clock" class="clock"></div>
+    </main>
+    <footer>
+      <h1 class="footer__title caps">imb</h1>
+    </footer>
+    <script src="js/clock.js"></script>
+    <script src="js/logbox.js"></script>
+    <!-- <script>
       $.get(
         "https://weirdscifi.ratiosemper.com/neocities.php?sitename=aboboracandy",
         (data) => {}
       );
     </script> -->
-</body>
-
+  </body>
 </html>

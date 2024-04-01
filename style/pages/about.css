@@ -206,35 +206,38 @@ header .menu {
   position: relative;
   left: -13px;
 }
-.container__box .content__paragraph {
+.container__box .content p {
   padding-left: 1em;
 }
-.container__box .content__paragraph .alt {
+.container__box .content p .alt {
   color: #ec9615;
   font: 700 1.2rem "notJam13", monospace;
   text-transform: capitalize;
 }
-.container__box .content__paragraph .sweet {
+.container__box .content p .sweet {
   position: relative;
   cursor: crosshair;
   /* --popups-animation-- */
 }
-.container__box .content__paragraph .sweetjpg {
+.container__box .content p .sweetjpg {
   visibility: hidden;
-  height: 400%;
-  padding: 2%;
+  height: 500%;
+  padding: 1%;
   position: absolute;
   z-index: 1;
-  background-color: black;
+  background-color: #ec9615;
   border-radius: 0.5rem;
 }
-.container__box .content__paragraph .sweet:hover > .sweetjpg {
+.container__box .content p .sweet:hover > .sweetjpg {
   visibility: visible;
-  animation: jitter linear 3s infinite alternate;
+  animation: jitter linear 5s infinite;
 }
-.container__box .content__paragraph::first-letter {
+.container__box .content p::first-letter {
   padding-left: 0.3em;
   text-transform: capitalize;
+}
+.container__box .content h1, .container__box .content h2 {
+  scroll-margin-top: 100px;
 }
 .container__box .content .backer {
   color: #ec9615;
@@ -314,40 +317,40 @@ footer .imgWrapper {
 /* --animations-- */
 @keyframes jitter {
   0% {
-    bottom: 105%;
-    left: 15%;
+    bottom: calc(120% - 1px);
+    left: calc(20% - 3px);
   }
   12.5% {
-    bottom: 102.5%;
-    left: 14%;
+    bottom: calc(120% - 4px);
+    left: calc(20% - 1px);
   }
   25% {
-    bottom: 101%;
-    left: 13%;
+    bottom: calc(120% - 2px);
+    left: calc(20% - 4px);
   }
   37.5% {
-    bottom: 102.5%;
-    left: 14%;
+    bottom: calc(120% + 1px);
+    left: calc(20% + 1px);
   }
   50% {
-    bottom: 105%;
-    left: 15%;
+    bottom: calc(120% + 4px);
+    left: calc(20% - 4px);
   }
   62.5% {
-    bottom: 107.5%;
-    left: 16%;
+    bottom: calc(120% + 2px);
+    left: calc(20% - 2px);
   }
   75% {
-    bottom: 109%;
-    left: 15%;
+    bottom: calc(120% + 3px);
+    left: calc(20% + 0px);
   }
   87.5% {
-    bottom: 107.5%;
-    left: 14%;
+    bottom: calc(120% - 1px);
+    left: calc(20% - 1px);
   }
   100% {
-    bottom: 105%;
-    left: 15%;
+    bottom: calc(120% - 3px);
+    left: calc(20% - 3px);
   }
 }
 @keyframes sweep {
