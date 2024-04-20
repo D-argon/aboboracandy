@@ -34,7 +34,7 @@
 body {
   background-color: #351526;
   box-sizing: border-box;
-  color: #A5E0A4;
+  color: #a5e0a4;
   font: 400 1rem/150% "VT323", monospace;
   margin: 0;
   padding: 0;
@@ -189,7 +189,7 @@ header .menu {
   border: 2px solid rgb(39, 3, 27);
   border-radius: 0.125rem;
   overflow: hidden scroll;
-  scrollbar-color: #668B66 transparent;
+  scrollbar-color: #668b66 transparent;
 }
 .container__box .content__title {
   font: 700 1.75em/50% "VT323", monospace;
@@ -197,7 +197,7 @@ header .menu {
 }
 .container__box .content__title .b {
   font: 700 1.5rem "notJam13", monospace;
-  background: -webkit-linear-gradient(right, #A5E0A4 0%, #ec9615 100%);
+  background: -webkit-linear-gradient(right, #a5e0a4 0%, #ec9615 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -251,11 +251,11 @@ header .menu {
 }
 .container__box .content .list dd {
   font-size: 0.8em;
-  color: #A5E0A4;
+  color: #a5e0a4;
 }
 .container__box .content .small {
   font-size: 1rem;
-  color: #A5E0A4;
+  color: #a5e0a4;
 }
 .container__box .box__lateral {
   background-color: rgba(0, 0, 0, 0.25);
@@ -275,10 +275,10 @@ header .menu {
   margin: 0;
 }
 .container__box .box__lateral--option li {
-  color: #668B66;
+  color: #668b66;
 }
 .container__box .box__lateral--option li .topics {
-  color: #A5E0A4;
+  color: #a5e0a4;
 }
 
 /* --footer---------------------------------------------- */
@@ -306,7 +306,7 @@ footer .socials .links {
   color: #ec9615;
 }
 footer .socials .links:visited {
-  color: #668B66;
+  color: #668b66;
 }
 footer .imgWrapper {
   display: flex;

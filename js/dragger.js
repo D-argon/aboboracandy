@@ -1,6 +1,6 @@
 // ----------- Drag
 let dragboxes = document.querySelectorAll(".dragbox");
-//add dragg to all
+//add drag to all
 dragboxes.forEach((dragbox) => {
   dragElement(dragbox);
   dragbox.addEventListener("mousedown", bringFront);
@@ -10,13 +10,9 @@ dragboxes.forEach((dragbox) => {
 function dragElement(elmnt) {
   let pos1, pos2, pos3, pos4;
 
-  let header = elmnt.querySelector(".dragbox__header");
+  const header = elmnt.querySelector(".dragbox__top--header");
 
-  if (header) {
-    header.addEventListener("mousedown", dragMouseDown);
-  } else {
-    elmnt.addEventListener("mousedown", dragMouseDown);
-  }
+  header.addEventListener("mousedown", dragMouseDown);
 
   function dragMouseDown(e) {
     e.preventDefault();

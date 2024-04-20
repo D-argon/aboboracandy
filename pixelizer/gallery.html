@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/imgs/media/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/style/pages/gallery.css" />
+    <title>gallery</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu" ondragstart="return false">
+        <a href="/" class="menu__btns menu--click">home</a>
+        <a href="/about.html" class="menu__btns menu--click">about</a>
+        <h1 class="menu__btns menu--on">pixelizer</h1>
+        <a href="/links.html" class="menu__btns menu--click">links</a>
+      </nav>
+      <div id="clock" class="clock"></div>
+    </header>
+    <main class="dragbox" id="picView">
+      <div class="dragbox__top">
+        <h2 class="dragbox__top--header">Picture Viewer</h2>
+        <div class="dragbox__top--options">
+          <div class="dragbox__top--options__btns">
+            <a href="/pixelizer.html">_</a>
+          </div>
+          <div class="dragbox__top--options__btns">[]</div>
+          <div class="dragbox__top--options__btns" id="dragbox-close">
+            <a href="/pixelizer.html">X</a>
+          </div>
+        </div>
+      </div>
+      <nav class="configs">
+        <a href="#" class="configs__options">file</a>
+        <a href="#" class="configs__options">edit</a>
+        <a href="#" class="configs__options">slide</a>
+        <a href="#" class="configs__options">show</a>
+        <a href="#" class="configs__options">help</a>
+      </nav>
+      <hr />
+      <div class="dragbox__content">
+        <aside class="dragbox__content__list">
+          <div class="cont dragbox__content__list--dir">
+            <ul>
+              <li class="entry">
+                <input type="checkbox" class="entry__btn" id="c" />
+                <label for="c"> C: \ </label>
+                <ul>
+                  <li class="entry">
+                    <input type="checkbox" class="entry__btn" id="users" />
+                    <label for="users"> users </label>
+                    <ul>
+                      <li class="entry">
+                        <input type="checkbox" class="entry__btn" id="aCandy" />
+                        <label for="aCandy"> abobora\ candy </label>
+                        <ul>
+                          <li class="entry">
+                            <input
+                              type="checkbox"
+                              class="entry__btn"
+                              id="pictures"
+                            />
+                            <label for="pictures"> Pictures </label>
+                            <ul>
+                              <li class="entry">
+                                <input
+                                  type="checkbox"
+                                  class="entry__btn"
+                                  id="it"
+                                />
+                                <label for="it"> italy </label>
+                                <ul></ul>
+                              </li>
+
+                              <li class="entry">
+                                <input
+                                  type="checkbox"
+                                  class="entry__btn"
+                                  id="art"
+                                />
+                                <label for="art"> drawings </label>
+                                <ul></ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="cont dragbox__content__list--files">Untitled.jpg</div>
+          <div class="cont dragbox__content__list--filter">
+            Image Files &#40;*. bmp,*. jpg, *. jpeg, *. png, *. gif, *. raw,
+            ...&#41;
+          </div>
+        </aside>
+        <div class="sideR">
+          <div class="imgContainer">
+            <img src="/imgs/gallery/drawings/Untitled.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/clock.js"></script>
+    <script src="/js/dragger.js"></script>
+    <script src="/js/picView.js"></script>
+  </body>
+</html>

@@ -464,4 +464,178 @@ header .clock {
   .txt-line, .txtdoc ul li {
     margin-top: 0.25em;
   }
-}/*# sourceMappingURL=pixelizer.css.map */
+}
+#picView {
+  width: 90vw;
+  height: 90vh;
+  transform: translate(-50%, -46%);
+}
+#picView .dragbox__top {
+  background-color: #010080;
+  box-sizing: border-box;
+  height: 5%;
+}
+#picView .dragbox__top--header {
+  text-shadow: 0.5px 0px #f2f2f2, 1.5px 0px #f2f2f2;
+}
+#picView .configs {
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  gap: 1em;
+  height: 4%;
+  padding: 0.3em 0 0 1.4em;
+}
+#picView .configs__options {
+  display: inline-block;
+}
+#picView .configs__options::first-letter {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+#picView hr {
+  margin: 0.5em 0 0;
+  border: solid 1px #404040;
+  border-top-color: #f2f2f2;
+}
+#picView .dragbox__content {
+  background-color: transparent;
+  border: none;
+  height: 90%;
+  box-sizing: border-box;
+  gap: 1em;
+  padding: 0.5em 0 1em;
+}
+#picView .dragbox__content__list {
+  width: 25%;
+  border: 2px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+  margin: 0 1em;
+  box-sizing: border-box;
+  padding: 0.75em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#picView .dragbox__content__list .cont {
+  background-color: #f5f5f5;
+  border: 3px groove white;
+  border-top-color: black;
+  border-left-color: black;
+  font-weight: bold;
+  padding: 0 0.5em;
+  word-break: keep-all;
+}
+#picView .dragbox__content__list--filter {
+  height: 5%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+#picView .dragbox__content__list--dir, #picView .dragbox__content__list--files {
+  height: 45%;
+}
+#picView .dragbox__content__list--dir {
+  font-size: 1rem;
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+}
+#picView .dragbox__content__list--dir ul {
+  list-style-type: none;
+  height: 10%;
+  margin: 0;
+  padding: 0;
+}
+#picView .dragbox__content__list--dir ul .entry {
+  color: black;
+  cursor: pointer;
+}
+#picView .dragbox__content__list--dir ul .entry__btn {
+  display: none;
+}
+#picView .dragbox__content__list--dir ul .entry label {
+  cursor: pointer;
+  font-weight: bold;
+}
+#picView .dragbox__content__list--dir ul .entry .entry {
+  display: none;
+  padding-left: 1em;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+}
+#picView .dragbox__content__list--dir ul .entry .entry .small {
+  font-size: 0.75em;
+  letter-spacing: normal;
+  line-height: 1;
+}
+#picView .dragbox__content .sideR {
+  width: 75%;
+  height: 80%;
+  margin-right: 0.5em;
+  border: 2px ridge white;
+  border-top-color: black;
+  border-left-color: black;
+  display: flex;
+  justify-content: center;
+}
+#picView .dragbox__content .sideR .imgContainer {
+  width: 80%;
+  height: 85%;
+  border: 2px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+  display: flex;
+  justify-content: center;
+}
+#picView .dragbox__content .sideR .imgContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    height: 200vh;
+    overflow: auto;
+  }
+  #picView {
+    height: 150vh;
+    max-width: 90%;
+    width: 95vw;
+    transform: translate(-50%, -27%);
+  }
+  #picView .dragbox__top {
+    height: 3.5%;
+  }
+  #picView .configs {
+    height: 2%;
+    margin-top: 0.2em;
+  }
+  #picView .dragbox__content {
+    height: 93%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 0.5em 1em;
+  }
+  #picView .dragbox__content__list {
+    width: 100%;
+    height: 35%;
+    box-sizing: border-box;
+    padding: 0.75em 1em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  #picView .dragbox__content .sideR {
+    width: 100%;
+    height: 65%;
+    margin: 0;
+  }
+  #picView .dragbox__content .sideR .imgContainer {
+    width: 100%;
+    height: 75%;
+  }
+}/*# sourceMappingURL=gallery.css.map */
