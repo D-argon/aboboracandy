@@ -2,18 +2,13 @@ wSite.code-workspace
 
 aboboracandy.code-workspace
 
-/style/styles.scss
+style/**/*.scss
+style/**/_*.scss
 
-/style/styles.css.map
+style/**/*.map
 
-/style/abstract
+style/abstract
 
-/style/pages/*.map
+style/components
 
-/style/pages/*.scss
-
-/style/components
-
-/style/*.scss
-
-/.git
+.git/
