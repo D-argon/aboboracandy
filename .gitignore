@@ -3,7 +3,7 @@ wSite.code-workspace
 aboboracandy.code-workspace
 
 style/**/*.scss
-style/**/_*.scss
+style/_styles.scss
 
 style/**/*.map
 
