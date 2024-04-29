@@ -278,6 +278,7 @@ header .menu--on {
 
 .footer__title {
   text-align: center;
+  letter-spacing: 0.3em;
 }
 
 /* ------------------------- animation -- */

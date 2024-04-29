@@ -25,21 +25,21 @@ $(document).ready(function () {
           right: menuItemPos.left + Math.round(entries.outerWidth() * 0.59),
         });
 
-        // enable unchecking radio
-        $(this)
-          .siblings("label")
-          .click(function () {
-            var radio = $(this).siblings("input");
-            var preVal = $(this).attr("previousValue");
-            console.log($(this));
-            console.log(this);
-            console.log(radio);
-            console.log(preVal);
+        // // enable unchecking radio
+        // $(this)
+        //   .siblings("label")
+        //   .click(function () {
+        //     var radio = $(this).siblings("input");
+        //     var preVal = $(this).attr("previousValue");
+        //     console.log($(this));
+        //     console.log(this);
+        //     console.log(radio);
+        //     console.log(preVal);
 
-            if (radio.prop("checked", true)) {
-              radio.prop("checked", false);
-            }
-          });
+        //     if (radio.prop("checked", true)) {
+        //       radio.prop("checked", false);
+        //     }
+        //   });
       }
 
       $(this).closest(".entry-date").siblings().find(".entries").hide();

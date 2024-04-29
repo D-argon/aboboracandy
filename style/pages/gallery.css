@@ -524,40 +524,33 @@ header .clock {
   border-top-color: black;
   border-left-color: black;
   font-weight: bold;
-  padding: 0 0.5em;
   word-break: keep-all;
-}
-#picView .dragbox__content__list--filter {
-  height: 5%;
-  overflow-y: hidden;
-  overflow-x: scroll;
 }
 #picView .dragbox__content__list--dir, #picView .dragbox__content__list--files {
   height: 45%;
-}
-#picView .dragbox__content__list--dir {
   font-size: 1rem;
   overflow-y: scroll;
   scrollbar-color: transparent transparent;
 }
-#picView .dragbox__content__list--dir ul {
+#picView .dragbox__content__list--dir ul, #picView .dragbox__content__list--files ul {
   list-style-type: none;
   height: 10%;
   margin: 0;
   padding: 0;
 }
-#picView .dragbox__content__list--dir ul .entry {
+#picView .dragbox__content__list--dir ul .entry, #picView .dragbox__content__list--files ul .entry {
   color: black;
   cursor: pointer;
+  padding: 0 0 0 0.5em;
 }
-#picView .dragbox__content__list--dir ul .entry__btn {
+#picView .dragbox__content__list--dir ul .entry__btn, #picView .dragbox__content__list--files ul .entry__btn {
   display: none;
 }
-#picView .dragbox__content__list--dir ul .entry label {
+#picView .dragbox__content__list--dir ul .entry label, #picView .dragbox__content__list--files ul .entry label {
   cursor: pointer;
   font-weight: bold;
 }
-#picView .dragbox__content__list--dir ul .entry .entry {
+#picView .dragbox__content__list--dir ul .entry .entry, #picView .dragbox__content__list--files ul .entry .entry {
   display: none;
   padding-left: 1em;
   letter-spacing: 2px;
@@ -565,10 +558,28 @@ header .clock {
   overflow-y: scroll;
   scrollbar-color: transparent transparent;
 }
-#picView .dragbox__content__list--dir ul .entry .entry .small {
+#picView .dragbox__content__list--dir ul .entry .entry .small, #picView .dragbox__content__list--files ul .entry .entry .small {
   font-size: 0.75em;
   letter-spacing: normal;
   line-height: 1;
+}
+#picView .dragbox__content__list--dir ul .entry.selected, #picView .dragbox__content__list--files ul .entry.selected {
+  background-color: #010080;
+  color: white;
+}
+#picView .dragbox__content__list--files ul .entry {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5em;
+}
+#picView .dragbox__content__list--files ul .entry__link {
+  padding: 0 0.2em;
+}
+#picView .dragbox__content__list--filter {
+  height: 5%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 0 0.5em;
 }
 #picView .dragbox__content .sideR {
   width: 75%;
@@ -589,9 +600,8 @@ header .clock {
   display: flex;
   justify-content: center;
 }
-#picView .dragbox__content .sideR .imgContainer img {
-  max-width: 100%;
-  max-height: 100%;
+#picView .dragbox__content .sideR--notes {
+  background-color: #f2f2f2;
 }
 
 @media only screen and (max-width: 1200px) {
