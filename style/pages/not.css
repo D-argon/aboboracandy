@@ -31,6 +31,15 @@
   src: local("Neue Regrade Bold"), url("../../fonts/NeueRegrade/NeueRegradeBold.otf");
   font-weight: 700;
 }
+@font-face {
+  font-family: milk;
+  src: local("milk"), url("/goodbye/fonts/aaa.ttf");
+}
+@font-face {
+  font-family: milk;
+  src: local("milk"), url("/goodbye/fonts/122.ttf");
+  font-weight: bold;
+}
 body {
   background-color: #351526;
   box-sizing: border-box;
@@ -109,13 +118,20 @@ hr {
   text-decoration: line-through;
 }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    scrollbar-color: transparent transparent;
+  }
+}
 .menu {
   align-items: center;
   box-sizing: border-box;
   display: flex;
   gap: 5%;
   height: 10vh;
+  overflow-x: scroll;
   position: relative;
+  scrollbar-color: transparent transparent;
   z-index: 1;
 }
 .menu__btns {

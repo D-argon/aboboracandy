@@ -1,29 +1,27 @@
 $(document).ready(function () {
-  var logDate = $(".entry-date__btn");
+  var logDate = $(".entry__btn");
 
   logDate.on("change", function () {
-    var entries = $(this).siblings(".entries");
+    var entries = $(this).siblings(".entry__box");
 
-    var menuItem = $(this).closest("li.entry-date"),
+    var menuItem = $(this).closest("li.logbox__list__entry"),
       menuItemPos = menuItem.position();
 
     // grab the menu item's position relative to its positioned parent
     if ($(this).is(":checked")) {
       if ($(window).width() <= 1200) {
-        // For mobile, show entries at the center and top
         entries.css({
           display: "block",
           top: menuItemPos.top + Math.round(menuItem.outerHeight() * 1.01),
           left: "50%",
           transform: "translateX(-50%)",
-        });
+        }); // For mobile, show entries at the center and top
       } else {
-        // For desktop, show entries relative to the menu item
         entries.css({
           display: "block",
           top: menuItemPos.top,
           right: menuItemPos.left + Math.round(entries.outerWidth() * 0.59),
-        });
+        }); // For desktop, show entries relative to the menu item
 
         // // enable unchecking radio
         // $(this)
@@ -42,34 +40,32 @@ $(document).ready(function () {
         //   });
       }
 
-      $(this).closest(".entry-date").siblings().find(".entries").hide();
       $(this)
-        .closest(".entry-date")
+        .closest(".logbox__list__entry")
         .siblings()
-        .find(".entry-date__btn")
+        .find(".entry__box")
+        .hide();
+
+      $(this)
+        .closest(".logbox__list__entry")
+        .siblings()
+        .find(".entry__btn")
         .prop("checked", false);
-    } else {
-      // Uncheck, hide entries
-      entries.hide();
-    }
+    } else entries.hide(); // Uncheck, hide entries
 
     if ($(this).is(":checked")) {
-      var entriesList = $(this).closest(".logbox__list").find(".entries");
+      var entriesList = $(this).closest(".logbox__list").find(".entry__box");
 
       // Find the most recent .entries element
       var maxZIndex = 0;
       entriesList.each(function () {
         var zIndex = parseInt($(this).css("z-index"), 10);
-        if (zIndex > maxZIndex) {
-          maxZIndex = zIndex;
-        }
+        if (zIndex > maxZIndex) maxZIndex = zIndex;
       });
 
       // Increase the z-index of the most recent .entries element
-      var currentEntries = $(this).siblings(".entries");
+      var currentEntries = $(this).siblings(".entry__box");
       currentEntries.css("z-index", maxZIndex + 1);
-    } else {
-      $(this).siblings(".entries").css("z-index", "auto");
-    }
+    } else $(this).siblings(".entry__box").css("z-index", "auto");
   });
 });

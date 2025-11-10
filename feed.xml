@@ -4,69 +4,28 @@
         <atom:link href="https://aboboracandy.neocities.org/feed.xml" rel="self"
             type="application/rss+xml" />
 
-        <language>en</language>
+        <language>en-us</language>
 
         <title>aboboracandy</title>
         <link>https://aboboracandy.neocities.org</link>
 
-        <webMaster>dargondark02@gmail.com (Artur S)</webMaster>
+        <webMaster>dargondark02@gmail.com (dargon)</webMaster>
 
         <description>The freshest updates from my personal website</description>
 
-        <lastBuildDate>Mon, 29 Apr 2024 11:58:10 -0300</lastBuildDate>
+        <lastBuildDate>Sat, 25 Oct 2025 16:27:00 -0300</lastBuildDate>
 
         <docs>https://www.rssboard.org/rss-specification</docs>
         <item>
-            <title>now with a functional gallery</title>
-            <description><![CDATA[<p>gallery working ! (more at least) next update comes next weekend and it will be the last for this website, I'm preparing a QnA, if you would like to participate, send me one!</p>]]></description>
+            <title>abobora revival</title>
+            <description><![CDATA[
+                we are so back !<br> logging of [motm] Hackers (1995) review.
+            ]]></description>
 
-            <pubDate>Mon, 29 Apr 2024 11:57:30 -0300</pubDate>
+            <pubDate>Sat, 25 Oct 2025 16:27:00 -0300</pubDate>
 
-            <link>https://aboboracandy.neocities.org/pixelizer/gallery</link>
-        </item>
-        <item>
-            <title>now with a gallery</title>
-            <description><![CDATA[<p>gallery for midia (still in progress), some fixes for styles and functionalities</p>]]></description>
-
-            <pubDate>Sat, 20 Apr 2024 21:00:00 -0300</pubDate>
-
-            <link>https://aboboracandy.neocities.org/pixelizer/gallery</link>
-            <guid>https://aboboracandy.neocities.org/pixelizer/gallery</guid>
-        </item>
-        <item>
-            <title>hemlo i'm back</title>
-            <description><![CDATA[<p>scss revamp, some styles change annnnd minor additions/changes</p>]]></description>
-
-            <pubDate>Mon, 12 Feb 2024 17:23:00 -0300</pubDate>
-
-            <link>https://aboboracandy.neocities.org/pixelizer</link>
-        </item>
-        <item>
-            <title>initial links.html</title>
-            <description><![CDATA[<p>made some additional utilities for the modals at pixelizer and organized the links.html</p>]]></description>
-
-            <pubDate>Sun, 06 Aug 2023 00:14:00 -0300</pubDate>
-
-            <link>https://aboboracandy.neocities.org/pixelizer</link>
-            <guid>https://aboboracandy.neocities.org/pixelizer</guid>
-        </item>
-        <item>
-            <title>What time is it?</title>
-            <description><![CDATA[<p>There's a brand new time display in the index and pixelizer pages!</p>]]></description>
-
-            <pubDate>Wed, 02 Aug 2023 16:24:00 -0300</pubDate>
-
-            <link>https://aboboracandy.neocities.org#clock</link>
-            <guid>https://aboboracandy.neocities.org#clock</guid>
-        </item>
-        <item>
-            <title>Hello RSS!</title>
-            <description><![CDATA[<p>The beggining of Abobora's RSS feed B)</p><p>not sure how many people use this but it doesn't hurt to learn something new!</p>]]></description>
-
-            <pubDate>Sat, 22 Jul 2023 23:59:00 -0300</pubDate>
-
-            <link>https://aboboracandy.neocities.org/feed.xml</link>
-            <guid>https://aboboracandy.neocities.org/feed.xml</guid>
+            <link>https://aboboracandy.neocities.org/journal.html</link>
+            <guid>https://aboboracandy.neocities.org/journal.html</guid>
         </item>
     </channel>
 </rss>
