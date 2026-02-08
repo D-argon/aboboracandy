@@ -1,60 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-@font-face {
-  font-family: "notJam13";
-  src: local("NotJamBlkltr13"), url("../../fonts/notJam/NotJamBlkltr13.ttf");
-}
-@font-face {
-  font-family: "w95fa";
-  src: local("w95fa"), url("../../fonts/w95fa/W95.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "imb";
-  src: local("IBM_BIOS-2y"), url("../../fonts/ibm/IBM_BIOS-2y.woff");
-}
-@font-face {
-  font-family: "csans";
-  src: local("comic sans"), url("../../fonts/hehe/hehe.ttf");
-}
-@font-face {
-  font-family: "neue regrade";
-  src: local("Neue Regrade"), url("../../fonts/NeueRegrade/NeueRegradeRegular.otf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "neue regrade";
-  src: local("Neue Regrade Light"), url("../../fonts/NeueRegrade/NeueRegradeLight.otf");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "neue regrade";
-  src: local("Neue Regrade Bold"), url("../../fonts/NeueRegrade/NeueRegradeBold.otf");
-  font-weight: 700;
-}
-@font-face {
-  font-family: milk;
-  src: local("milk"), url("/goodbye/fonts/aaa.ttf");
-}
-@font-face {
-  font-family: milk;
-  src: local("milk"), url("/goodbye/fonts/122.ttf");
-  font-weight: bold;
-}
-body {
-  background-color: #351526;
-  box-sizing: border-box;
-  color: #a5e0a4;
-  font: 400 1rem/150% "VT323", monospace;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #351526;
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
+*/
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+html, body {
+  scrollbar-color: transparent transparent;
 }
 
 a {
-  background-color: none;
+  background-color: transparent;
   color: inherit;
   text-decoration: none;
 }
@@ -80,29 +37,19 @@ h4,
 h5,
 h6,
 button,
-input {
+input,
+body {
   margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
 }
 
 hr {
   box-sizing: content-box;
   height: 0;
-}
-
-.container {
-  height: 80vh;
-}
-
-.hidden {
-  display: none;
-}
-
-.hidden--text {
-  opacity: 0;
-  position: relative;
-}
-.hidden--text:hover {
-  opacity: 1;
 }
 
 .caps {
@@ -118,33 +65,191 @@ hr {
   text-decoration: line-through;
 }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    scrollbar-color: transparent transparent;
-  }
-}
-.menu {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  gap: 5%;
-  height: 10vh;
-  overflow-x: scroll;
-  position: relative;
-  scrollbar-color: transparent transparent;
-  z-index: 1;
-}
-.menu__btns {
-  color: #ec9615;
-  font-size: 1.5rem;
-  line-height: 1.25rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.menu--on {
-  cursor: default;
+b,
+strong {
+  font-weight: bold;
 }
 
+small {
+  font-size: 75%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+@keyframes scans {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px 100%;
+  }
+}
+@keyframes ghost {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.5px 0 1px rgba(51, 255, 0, 0.5), -0.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px rgba(51, 255, 0, 0.5), -1.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px rgba(51, 255, 0, 0.5), -0.1px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px rgba(51, 255, 0, 0.5), -2px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px rgba(51, 255, 0, 0.5), -2.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px rgba(51, 255, 0, 0.5), 0 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+}
+@keyframes textShadowAlt {
+  0% {
+    text-shadow: 0.5px 0 1px rgba(232, 140, 12, 0.5), -0.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px rgba(232, 140, 12, 0.5), -1.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px rgba(232, 140, 12, 0.5), -0.1px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px rgba(232, 140, 12, 0.5), -2px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px rgba(232, 140, 12, 0.5), -2.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px rgba(232, 140, 12, 0.5), 0 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+}
+@keyframes ledScroller {
+  0% {
+    transform: translateX(112%);
+  }
+  100% {
+    transform: translateX(-112%);
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes jitter {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, 0.5px) rotate(-0.6deg);
+  }
+  20% {
+    transform: translate(1px, -1px) rotate(0.6deg);
+  }
+  30% {
+    transform: translate(-0.6px, 1px) rotate(-0.4deg);
+  }
+  40% {
+    transform: translate(0.8px, -0.4px) rotate(0.3deg);
+  }
+  50% {
+    transform: translate(-0.5px, 0) rotate(0deg);
+  }
+  60% {
+    transform: translate(0.4px, -0.6px) rotate(0.5deg);
+  }
+  70% {
+    transform: translate(-0.8px, 0.8px) rotate(-0.6deg);
+  }
+  80% {
+    transform: translate(0.6px, -0.3px) rotate(0.2deg);
+  }
+  90% {
+    transform: translate(-0.2px, 0.4px) rotate(-0.2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: 0rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 1.5rem;
+  }
+}
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating to a reusable component.
+*/
+.hidden {
+  display: none;
+}
+
+.hidden-text {
+  opacity: 0;
+  position: relative;
+}
+.hidden-text:hover {
+  opacity: 1;
+}
+
+.crt {
+  animation: textShadow 4s linear infinite;
+}
+.crt::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(hsla(0, 0%, 8%, 0.1), rgba(0, 0, 0, 0.7));
+  background-size: 100% 3px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scans 8s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+
+/*
+This file is used to contain all component imports.
+Files inside this folder can contain specific element styles and layout. 
+*/
 body {
   font: normal 1rem/1.5 "w95fa", monospace;
   background-color: #008080;
@@ -162,13 +267,28 @@ header {
   border-bottom-style: ridge;
   border-bottom-color: white;
 }
-header .menu {
+
+.menu {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 10vh;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-color: transparent transparent;
+  z-index: 1;
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
   gap: 0.25em;
 }
-header .menu__btns {
+
+.menu__btn {
+  color: #ec9615;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
   height: 90%;
   padding: 0.6% 0.5em;
   box-sizing: border-box;
@@ -179,43 +299,28 @@ header .menu__btns {
   color: black;
   text-transform: capitalize;
 }
-header .menu--on {
+.menu__btn.btn--is-clickable:hover, .menu__btn.btn--is-currentpage {
   transform: translate(0.5px, 0.5px);
   border-style: groove;
   border-color: black white white black;
   background: repeating-linear-gradient(0deg, #c0c0c0 0, #c0c0c0 1px, #dedede 1px, #dedede 2px);
+}
+.menu__btn.btn--is-clickable:hover::after, .menu__btn.btn--is-currentpage::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, #c0c0c0 0, #c0c0c0 1px, transparent 1px, transparent 2px);
+}
+.menu__btn.btn--is-currentpage {
+  cursor: default;
   text-shadow: 0.5px 0px black, 1.5px 0px black;
   color: transparent;
   letter-spacing: 1px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-header .menu--on::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(90deg, #c0c0c0 0, #c0c0c0 1px, transparent 1px, transparent 2px);
-}
-header .menu--click:hover {
-  transform: translate(0.5px, 0.5px);
-  border-style: groove;
-  border-color: black white white black;
-  background: repeating-linear-gradient(0deg, #c0c0c0 0, #c0c0c0 1px, #dedede 1px, #dedede 2px);
-}
-header .menu--click:hover::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(90deg, #c0c0c0 0, #c0c0c0 1px, transparent 1px, transparent 2px);
-}
+
 header .clock {
   width: 8%;
   height: 80%;
@@ -234,10 +339,12 @@ header .clock {
 .container {
   height: 95vh;
 }
+
 .container__box {
   height: 100%;
   display: flex;
 }
+
 .container__box__buttons {
   padding: 1em 2em 0;
   width: 100%;
@@ -247,6 +354,7 @@ header .clock {
   grid-template-rows: repeat(auto-fill, 6rem);
   gap: 1.5em;
 }
+
 .container__box__buttons .btn-div {
   width: 6rem;
   height: 6rem;
@@ -258,11 +366,13 @@ header .clock {
   flex-flow: column;
   gap: 0.5em;
 }
+
 .container__box__buttons .btn-div__img {
   max-width: 4em;
   max-height: 4em;
   cursor: pointer;
 }
+
 .container__box__buttons .btn-div__title {
   cursor: default;
   text-align: center;
@@ -309,6 +419,7 @@ header .clock {
   border-left-color: white;
   background-color: #c0c0c0;
 }
+
 .dragbox__top {
   height: 1.5em;
   padding: 0.2em 0.2em 0.2em 0;
@@ -316,6 +427,7 @@ header .clock {
   align-items: center;
   background-color: #808080;
 }
+
 .dragbox__top--header {
   height: 100%;
   margin-left: 2%;
@@ -327,6 +439,7 @@ header .clock {
   color: transparent;
   letter-spacing: 1px;
 }
+
 .dragbox__top--options {
   width: 6em;
   height: 100%;
@@ -334,6 +447,7 @@ header .clock {
   display: flex;
   gap: 0.2em;
 }
+
 .dragbox__top--options__btns {
   background-color: #c0c0c0;
   border: 3px ridge #808080;
@@ -348,6 +462,7 @@ header .clock {
   width: 33%;
   box-sizing: border-box;
 }
+
 .dragbox__content {
   background-color: white;
   border: 3px ridge white;
@@ -357,11 +472,13 @@ header .clock {
   display: flex;
   gap: 1em;
 }
+
 .dragbox__content--txt {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
+
 .dragbox__content--txt .links {
   color: blue;
 }
@@ -391,6 +508,7 @@ header .clock {
   padding: 1em 1.5em;
   overflow-y: scroll;
 }
+
 .txtdoc ul {
   display: flex;
   flex-direction: column;
@@ -419,7 +537,7 @@ header .clock {
 
 .done {
   -webkit-text-decoration: line-through 0.2rem rgb(10, 97, 10);
-          text-decoration: line-through 0.2rem rgb(10, 97, 10);
+  text-decoration: line-through 0.2rem rgb(10, 97, 10);
 }
 
 /* ---------------------mobile--------------------- */
@@ -477,7 +595,8 @@ header .clock {
     padding-left: 1.3em;
     margin-top: 0.5em;
   }
-  .txt-line, .txtdoc ul li {
+  .txt-line,
+  .txtdoc ul li {
     margin-top: 0.25em;
   }
 }
@@ -486,14 +605,17 @@ header .clock {
   height: 90vh;
   transform: translate(-50%, -46%);
 }
+
 #picView .dragbox__top {
   background-color: #010080;
   box-sizing: border-box;
   height: 5%;
 }
+
 #picView .dragbox__top--header {
   text-shadow: 0.5px 0px #f2f2f2, 1.5px 0px #f2f2f2;
 }
+
 #picView .configs {
   box-sizing: border-box;
   color: black;
@@ -502,18 +624,22 @@ header .clock {
   height: 4%;
   padding: 0.3em 0 0 1.4em;
 }
+
 #picView .configs__options {
   display: inline-block;
 }
+
 #picView .configs__options::first-letter {
   text-decoration: underline;
   text-transform: uppercase;
 }
+
 #picView hr {
   margin: 0.5em 0 0;
   border: solid 1px #404040;
   border-top-color: #f2f2f2;
 }
+
 #picView .dragbox__content {
   background-color: transparent;
   border: none;
@@ -522,6 +648,7 @@ header .clock {
   gap: 1em;
   padding: 0.5em 0 1em;
 }
+
 #picView .dragbox__content__list {
   width: 25%;
   border: 2px ridge black;
@@ -534,6 +661,7 @@ header .clock {
   flex-direction: column;
   gap: 0.5em;
 }
+
 #picView .dragbox__content__list .cont {
   background-color: #f5f5f5;
   border: 3px groove white;
@@ -542,31 +670,43 @@ header .clock {
   font-weight: bold;
   word-break: keep-all;
 }
-#picView .dragbox__content__list--dir, #picView .dragbox__content__list--files {
+
+#picView .dragbox__content__list--dir,
+#picView .dragbox__content__list--files {
   height: 45%;
   font-size: 1rem;
   overflow-y: scroll;
   scrollbar-color: transparent transparent;
 }
-#picView .dragbox__content__list--dir ul, #picView .dragbox__content__list--files ul {
+
+#picView .dragbox__content__list--dir ul,
+#picView .dragbox__content__list--files ul {
   list-style-type: none;
   height: 10%;
   margin: 0;
   padding: 0;
 }
-#picView .dragbox__content__list--dir ul .entry, #picView .dragbox__content__list--files ul .entry {
+
+#picView .dragbox__content__list--dir ul .entry,
+#picView .dragbox__content__list--files ul .entry {
   color: black;
   cursor: pointer;
   padding: 0 0 0 0.5em;
 }
-#picView .dragbox__content__list--dir ul .entry__btn, #picView .dragbox__content__list--files ul .entry__btn {
+
+#picView .dragbox__content__list--dir ul .entry__btn,
+#picView .dragbox__content__list--files ul .entry__btn {
   display: none;
 }
-#picView .dragbox__content__list--dir ul .entry label, #picView .dragbox__content__list--files ul .entry label {
+
+#picView .dragbox__content__list--dir ul .entry label,
+#picView .dragbox__content__list--files ul .entry label {
   cursor: pointer;
   font-weight: bold;
 }
-#picView .dragbox__content__list--dir ul .entry .entry, #picView .dragbox__content__list--files ul .entry .entry {
+
+#picView .dragbox__content__list--dir ul .entry .entry,
+#picView .dragbox__content__list--files ul .entry .entry {
   display: none;
   padding-left: 1em;
   letter-spacing: 2px;
@@ -574,29 +714,37 @@ header .clock {
   overflow-y: scroll;
   scrollbar-color: transparent transparent;
 }
-#picView .dragbox__content__list--dir ul .entry .entry .small, #picView .dragbox__content__list--files ul .entry .entry .small {
+
+#picView .dragbox__content__list--dir ul .entry .entry .small,
+#picView .dragbox__content__list--files ul .entry .entry .small {
   font-size: 0.75em;
   letter-spacing: normal;
   line-height: 1;
 }
-#picView .dragbox__content__list--dir ul .entry.selected, #picView .dragbox__content__list--files ul .entry.selected {
+
+#picView .dragbox__content__list--dir ul .entry.selected,
+#picView .dragbox__content__list--files ul .entry.selected {
   background-color: #010080;
   color: white;
 }
+
 #picView .dragbox__content__list--files ul .entry {
   display: flex;
   justify-content: space-between;
   padding-right: 0.5em;
 }
+
 #picView .dragbox__content__list--files ul .entry__link {
   padding: 0 0.2em;
 }
+
 #picView .dragbox__content__list--filter {
   height: 5%;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 0 0.5em;
 }
+
 #picView .dragbox__content .sideR {
   width: 75%;
   height: 80%;
@@ -607,6 +755,7 @@ header .clock {
   display: flex;
   justify-content: center;
 }
+
 #picView .dragbox__content .sideR .imgContainer {
   width: 80%;
   height: 85%;
@@ -616,6 +765,12 @@ header .clock {
   display: flex;
   justify-content: center;
 }
+#picView .dragbox__content .sideR .imgContainer #imgDisplay {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 #picView .dragbox__content .sideR--notes {
   background-color: #f2f2f2;
 }

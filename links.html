@@ -9,26 +9,27 @@
     <link href="/imgs/favicon.ico?v=4" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://voicedrew.xyz/wr/onionring.css" />
 
-    <link rel="stylesheet" href="style/pages/links.css" />
+    <link rel="stylesheet" href="/style/abstracts/fonts.css" />
+    <link rel="stylesheet" href="/style/pages/links.css" />
   </head>
 
   <body>
     <header>
       <nav class="menu" ondragstart="return false;">
-        <a href="." class="menu__btns menu--click">home</a>
-        <a href="about.html" class="menu__btns">about</a>
-        <a href="pixelizer/gallery.html" class="menu__btns menu--click"
+        <a href="/" class="menu__btn btn--is-clickable">home</a>
+        <a href="/about.html" class="menu__btn btn--is-clickable">about</a>
+        <a href="/pixelizer/gallery.html" class="menu__btn btn--is-clickable"
           >gallery</a
         >
-        <span href="links.html" class="menu__btns menu--on">links</span>
-        <a href="journal.html" class="menu__btns menu--click">journal</a>
+        <span class="menu__btn btn--is-currentpage">links</span>
+        <a href="/journal.html" class="menu__btn btn--is-clickable">journal</a>
       </nav>
     </header>
     <section class="box">
       <h2 class="box__title">button wall</h2>
       <p class="box__txt">The best way to show your favorite websites!</p>
       <div class="btn__list">
-        <a title="sizeof(cat)" href="https://sizeof.cat/" target="_blank"
+        <a href="https://sizeof.cat/" target="_blank"
           ><img
             src="https://sizeof.cat/img/sizeofcat-240x60-black.gif"
             alt="sizeof.cat"
@@ -83,29 +84,23 @@
             width="88"
             height="31"
         /></a>
-        <a
-          href="https://punp.neocities.org"
-          target="_blank"
-          title="Punp's artwork"
-        >
+        <a href="https://punp.neocities.org" target="_blank">
           <img
             src="https://punp.neocities.org/assets/Punp_88x31.gif"
-            loading="lazy"
             alt="punp.neocities.org"
           />
         </a>
+        <a href="https://cabbagesorter.net/" target="_blank"
+          ><img
+            src="https://cabbagesorter.net/assets/images/buttons/cabbagesorter.gif"
+            alt="cabbagesorter"
+        /></a>
       </div>
       <div class="btn__list">
-        <a
-          href="https://derplayer.neocities.org"
-          target="_blank"
-          class="btn__list--link"
+        <a href="https://derplayer.neocities.org" target="_blank" class="link"
           >[derplayer]</a
         >
-        <a
-          href="https://foreverliketh.is"
-          target="_blank"
-          class="btn__list--link"
+        <a href="https://foreverliketh.is" target="_blank" class="link"
           >[eden]</a
         >
       </div>
@@ -128,6 +123,26 @@
           defer
         ></script>
       </div>
+      <div class="webring" id="cssjoy-webring">
+        <p>CSS JOY Webring</p>
+        <div class="webring__wrapper">
+          <a
+            class="webring__wrapper__btn"
+            href="https://webri.ng/webring/cssjoy/previous?via=https://aboboracandy.neocities.org/links"
+            >Previous Site</a
+          >
+          <a
+            class="webring__wrapper__btn"
+            href="https://webri.ng/webring/cssjoy/random?via=https://aboboracandy.neocities.org/links"
+            >Random Site</a
+          >
+          <a
+            class="webring__wrapper__btn"
+            href="https://webri.ng/webring/cssjoy/next?via=https://aboboracandy.neocities.org/links"
+            >Next Site</a
+          >
+        </div>
+      </div>
     </section>
     <section class="box">
       <h2 class="box__title">art</h2>
@@ -137,25 +152,23 @@
           <a
             href="https://www.youtube.com/@ProkoTV"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >Proko</a
           >
         </li>
         <li>
-          <a href="https://drawabox.com" target="_blank" class="btn__list--link"
+          <a href="https://drawabox.com" target="_blank" class="link"
             >Drawabox</a
           >
         </li>
         <li>
-          <a href="https://krita.org" target="_blank" class="btn__list--link"
-            >Krita</a
-          >
+          <a href="https://krita.org" target="_blank" class="link">Krita</a>
         </li>
         <li>
           <a
             href="https://www.youtube.com/@sinixdesign"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >Sinix Design</a
           >
         </li>
@@ -163,7 +176,7 @@
           <a
             href="https://www.youtube.com/@monlenz"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >Monstergarden</a
           >
         </li>
@@ -171,15 +184,12 @@
           <a
             href="https://github.com/lucatronica/picocad-web-viewer/tree/main"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >Picocad viewer</a
           >
         </li>
         <li>
-          <a
-            href="https://x6ud.github.io/#/"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://x6ud.github.io/#/" target="_blank" class="link"
             >Skulls viewer</a
           >
         </li>
@@ -190,10 +200,7 @@
       <p class="box__txt">Mostly online helpful links</p>
       <ul class="links__list">
         <li>
-          <a
-            href="https://thealexandrian.net/"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://thealexandrian.net/" target="_blank" class="link"
             >The Alexandrian</a
           >
         </li>
@@ -201,28 +208,22 @@
           <a
             href="https://handouts.cthulhuarchitect.com/generator"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >RPG handout gen</a
           >
         </li>
         <li>
-          <a
-            href="https://5e.tools/index.html"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://5e.tools/index.html" target="_blank" class="link"
             >5e ultimate compendium</a
           >
         </li>
         <li>
-          <a
-            href="https://www.lolailo.co.uk"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://www.lolailo.co.uk" target="_blank" class="link"
             >more RPG resources</a
           >
         </li>
         <li>
-          <a href="https://desmume.org/" target="_blank" class="btn__list--link"
+          <a href="https://desmume.org/" target="_blank" class="link"
             >DeSmuME</a
           >
           NDS simulator
@@ -231,44 +232,32 @@
           <a
             href="https://sadgrl.online/learn/sections/html-and-css"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >sadgrl HTML/CSS</a
           >
         </li>
         <li>
-          <a
-            href="https://validator.w3.org/feed/"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://validator.w3.org/feed/" target="_blank" class="link"
             >RSS verifier</a
           >
         </li>
         <li>
-          <a href="https://feedly.com" target="_blank" class="btn__list--link"
+          <a href="https://feedly.com" target="_blank" class="link"
             >RSS web reader</a
           >
         </li>
         <li>
-          <a
-            href="https://swiperjs.com/"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://swiperjs.com/" target="_blank" class="link"
             >Swiper</a
           >
         </li>
         <li>
-          <a
-            href="https://teachyourselfcs.com/"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://teachyourselfcs.com/" target="_blank" class="link"
             >Teach Yourself Computer Science</a
           >
         </li>
         <li>
-          <a
-            href="https://mangadex.org/"
-            target="_blank"
-            class="btn__list--link"
+          <a href="https://mangadex.org/" target="_blank" class="link"
             >Web manga</a
           >
         </li>
@@ -276,12 +265,11 @@
           <a
             href="https://dannarchy.com/tut/tut_002"
             target="_blank"
-            class="btn__list--link"
+            class="link"
             >Neocities web Hit-counter</a
           >
         </li>
       </ul>
     </section>
-    <footer></footer>
   </body>
 </html>

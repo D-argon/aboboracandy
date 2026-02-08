@@ -220,6 +220,32 @@ h1 {
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
 */
+.hidden {
+  display: none;
+}
+
+.hidden-text {
+  opacity: 0;
+  position: relative;
+}
+.hidden-text:hover {
+  opacity: 1;
+}
+
+.crt {
+  animation: textShadow 4s linear infinite;
+}
+.crt::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(hsla(0, 0%, 8%, 0.1), rgba(0, 0, 0, 0.7));
+  background-size: 100% 3px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scans 8s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+
 /*
 This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
@@ -229,6 +255,12 @@ body {
   font: 400 1.5rem/150% "VT323", monospace;
   color: hsl(119, 49%, 76%);
   background: url("/imgs/media/milkBgAbout.jpg") center/100% no-repeat;
+}
+body ::-moz-selection {
+  background-color: #50263e;
+}
+body ::selection {
+  background-color: #50263e;
 }
 
 h1,
@@ -494,6 +526,10 @@ footer .socials {
 }
 #discord:has(#dc:hover)::after {
   color: hsl(82, 72%, 57%);
+}
+
+#rss img {
+  display: block;
 }
 
 /* ---------------------mobile--------------------- */

@@ -68,90 +68,57 @@ const imgDisplay = (() => {
   const ctx = canvas.getContext("2d");
   let img;
 
-  function resizeCanvas(imgW, imgH) {
-    const canvasW = canvas.width;
-    const canvasH = canvas.height;
-
-    // Set canvas dimensions to match container
+  function resizeCanvas(img) {
     canvas.width = container.clientWidth;
     canvas.height = container.clientHeight;
 
-    // Calculate aspect ratio
-    const containerRatio = canvasW / canvasH;
-    const imgRatio = imgW / imgH;
+    const cW = canvas.width,
+      cH = canvas.height;
 
-    let scale = 1;
+    const iw = img.width,
+      ih = img.height;
 
-    if (imgRatio > containerRatio) {
-      scale = canvasW / imgW;
+    const canvasRatio = cW / cH,
+      imgRatio = iw / ih;
+
+    let drawW, drawH;
+    if (imgRatio > canvasRatio) {
+      drawW = cW;
+      drawH = cW / imgRatio;
     } else {
-      scale = canvasH / imgH;
+      drawH = cH;
+      drawW = cH * imgRatio;
     }
 
-    const scaledW = imgW * scale;
-    const scaledH = imgH * scale;
+    const offsetX = (cW - drawW) / 2,
+      offsetY = (cH - drawH) / 2;
 
-    // Clear the canvas
-    ctx.clearRect(0, 0, canvasW, canvasH);
-
-    // Draw the image
-    const x = (canvasW - scaledW) / 2;
-    const y = (canvasH - scaledH) / 2;
-    ctx.drawImage(img, x, y, scaledW, scaledH);
-
-    // Construct RGB color string
-    const bgColor = getImgBgColor(img, x, y, scaledW, scaledH);
-    canvas.style.backgroundColor = bgColor;
-
-    // Add event listener for window resize
-    window.addEventListener("resize", () => draw(img.src)); // Redraw with same image source
+    ctx.clearRect(0, 0, cW, cH);
+    ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
+    canvas.style.backgroundColor = getImgBgColor(img, 0, 0, cW, cH);
   }
 
-  function draw(imgSrc) {
+  const cache = {};
+  function draw(src) {
+    if (cache[src]) {
+      img = cache[src];
+      resizeCanvas(img);
+      return;
+    }
+
     img = new Image();
-
-    // Set canvas size initially
-    img.onload = () => resizeCanvas(img.width, img.height);
-
-    img.src = imgSrc;
-  }
-
-  function getImgAvgColor(img, x, y, w, h) {
-    // Draw the image onto an off-screen canvas
-    const offScCanvas = document.createElement("canvas");
-    const offScCtx = offScCanvas.getContext("2d");
-    offScCanvasW = w;
-    offScCanvasH = h;
-    offScCtx.drawImage(img, -x, -y, img.width, img.height);
-
-    // Get the pixel data
-    const imageData = offScCtx.getImageData(0, 0, w, h).data;
-
-    let ttlR = 0;
-    let ttlG = 0;
-    let ttlB = 0;
-
-    // Calculate the average color
-    for (let i = 0; i < imageData.length; i += 4) {
-      ttlR += imageData[i];
-      ttlG += imageData[i + 1];
-      ttlB += imageData[i + 2];
-    }
-
-    const pxCount = imageData.length / 4;
-    const avrgR = Math.round(ttlR / pxCount);
-    const avrgG = Math.round(ttlG / pxCount);
-    const avrgB = Math.round(ttlB / pxCount);
-
-    return `rgb(${avrgR},${avrgG},${avrgB})`;
+    img.onload = () => {
+      cache[src] = img;
+      resizeCanvas(img);
+    };
+    img.src = src;
   }
 
   function getImgBgColor(img, x, y, w, h) {
     // Draw the image onto an off-screen canvas
     const offScCanvas = document.createElement("canvas");
     const offScCtx = offScCanvas.getContext("2d");
-    offScCanvasW = w;
-    offScCanvasH = h;
+
     offScCtx.drawImage(img, -x, -y, img.width, img.height);
 
     // Get the pixel data
@@ -164,6 +131,11 @@ const imgDisplay = (() => {
 
     return `rgb(${r},${g},${b})`;
   }
+
+  document.querySelectorAll(".entry__btn + label").forEach((label) => {
+    const src = label.getAttribute("data-img");
+    label.addEventListener("click", () => imgDisplay.draw(src));
+  });
 
   return {
     draw: draw,

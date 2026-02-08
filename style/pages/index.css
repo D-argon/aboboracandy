@@ -220,6 +220,32 @@ h1 {
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
 */
+.hidden {
+  display: none;
+}
+
+.hidden-text {
+  opacity: 0;
+  position: relative;
+}
+.hidden-text:hover {
+  opacity: 1;
+}
+
+.crt {
+  animation: textShadow 4s linear infinite;
+}
+.crt::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(hsla(0, 0%, 8%, 0.1), rgba(0, 0, 0, 0.7));
+  background-size: 100% 3px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scans 8s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+
 /*
 This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
@@ -235,24 +261,6 @@ body ::-moz-selection {
 body ::-moz-selection,
 body ::selection {
   background-color: hsla(108, 100%, 50%, 0.5);
-}
-
-.crt {
-  animation: textShadow 4s linear infinite;
-}
-.crt::before {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(hsla(0, 0%, 8%, 0.1), rgba(0, 0, 0, 0.7));
-  background-size: 100% 3px;
-  z-index: 9999;
-  pointer-events: none;
-  animation: scans 8s cubic-bezier(0.4, 0, 1, 1) infinite;
 }
 
 header {
@@ -343,14 +351,17 @@ header .menu {
   padding-left: 2rem; /* spacing between loops */
 }
 
-.link {
+.link,
+.alt {
   color: hsl(41, 100%, 50%);
   animation: textShadowAlt 1.5s linear infinite;
 }
-.link::-moz-selection {
+.link::-moz-selection, .alt::-moz-selection {
   background-color: hsla(35, 90%, 48%, 0.5);
 }
-.link::selection {
+.link::-moz-selection, .link::selection,
+.alt::-moz-selection,
+.alt::selection {
   background-color: hsla(35, 90%, 48%, 0.5);
 }
 

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@font-face {
+  font-family: "notJam13";
+  src: url("../../fonts/notJam/NotJamBlkltr13.ttf");
+}
+
+:root {
+  --d-mag: #351526;
+  --black: #000;
+  --white: #fff;
+  --fun-green: #599d29;
+  --lfun-green: #599d29;
+  --orange: #ec9615;
+
+  --fontFamily: 'VT323', monospace;
+  --fontFamily2: notJam13;
+}
+
+body {
+  background-color: var(--d-mag);
+  color: var(--fun-green);
+
+  font: 400 1rem/150% "VT323", monospace;
+}
+
+.container {
+  height: 80vh;
+  width: 100vw;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden--text {
+  opacity: 0;
+  position: relative;
+}
+
+.hidden--text:hover {
+  opacity: 0.9;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.under {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.thrg {
+  text-decoration: line-through;
+}
+
+/* -----menu----- */
+
+.menu {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 5%;
+
+  position: relative;
+  z-index: 1;
+}
+
+.menu__btns {
+  text-decoration: none;
+
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}
+
+.menu--on {
+  cursor: default;
+}
+
+.rbwTxt {  
+  animation: none;
+  text-shadow: none;
+  animation: rainbow 1s infinite linear;
+  }
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+
+/* ---------------------mobile--------------------- */
+
+@media (max-width: 1200px) {
+  body {
+    height: 100%;
+    width: 100%;
+  }
+}

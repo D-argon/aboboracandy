@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/imgs/media/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/style/abstracts/fonts.css" />
+    <link rel="stylesheet" href="/style/pages/gallery.css" />
+    <title>gallery</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu" ondragstart="return false;">
+        <a href="/" class="menu__btn btn--is-clickable">home</a>
+        <a href="/about.html" class="menu__btn btn--is-clickable">about</a>
+        <span class="menu__btn btn--is-currentpage"
+          >gallery</span
+        >
+        <a href="/links.html" class="menu__btn btn--is-clickable">link</a>
+        <a href="/journal.html" class="menu__btn btn--is-clickable">journal</a>
+      </nav>
+      <div id="clock" class="clock"></div>
+    </header>
+    <main class="dragbox" id="picView">
+      <div class="dragbox__top">
+        <h2 class="dragbox__top--header">Picture Viewer</h2>
+        <div class="dragbox__top--options">
+          <div class="dragbox__top--options__btns">
+            <a href="/pixelizer.html">_</a>
+          </div>
+          <div class="dragbox__top--options__btns">[]</div>
+          <div class="dragbox__top--options__btns" id="dragbox-close">
+            <a href="/pixelizer.html">X</a>
+          </div>
+        </div>
+      </div>
+      <nav class="configs">
+        <a href="#" class="configs__options">file</a>
+        <a href="#" class="configs__options">edit</a>
+        <a href="#" class="configs__options">slide</a>
+        <a href="#" class="configs__options">show</a>
+        <a href="#" class="configs__options">help</a>
+      </nav>
+      <hr />
+      <div class="dragbox__content">
+        <aside class="dragbox__content__list">
+          <div class="cont dragbox__content__list--dir">
+            <ul>
+              <li class="entry">
+                <input type="checkbox" class="entry__btn" id="c" />
+                <label for="c"> C: \ </label>
+                <ul>
+                  <li class="entry">
+                    <input type="checkbox" class="entry__btn" id="users" />
+                    <label for="users"> users </label>
+                    <ul>
+                      <li class="entry">
+                        <input type="checkbox" class="entry__btn" id="aCandy" />
+                        <label for="aCandy"> abobora\ candy </label>
+                        <ul>
+                          <li class="entry">
+                            <input
+                              type="checkbox"
+                              class="entry__btn"
+                              id="pictures"
+                            />
+                            <label for="pictures"> Pictures </label>
+                            <ul>
+                              <li class="entry">
+                                <input
+                                  type="checkbox"
+                                  class="entry__btn"
+                                  id="it"
+                                />
+                                <label for="it"> italy </label>
+                                <ul></ul>
+                              </li>
+
+                              <li class="entry selected">
+                                <input
+                                  type="checkbox"
+                                  class="entry__btn"
+                                  id="art"
+                                />
+                                <label for="art"> drawings </label>
+                                <ul></ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="cont dragbox__content__list--files">
+            <ul>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230220" />
+                <label
+                  for="20230220"
+                   data-img="/imgs/gallery/drawings/20230220.jpg"
+                  >20230220.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230220.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230221" />
+                <label
+                  for="20230221"
+                   data-img="/imgs/gallery/drawings/20230221.jpg"
+                  >20230221.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230221.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230228" />
+                <label
+                  for="20230228"
+                   data-img="/imgs/gallery/drawings/20230228.jpg"
+                  >20230228.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230228.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230303" />
+                <label
+                  for="20230303"
+                   data-img="/imgs/gallery/drawings/20230303.jpg"
+                  >20230303.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230303.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="202303031" />
+                <label
+                  for="202303031"
+                   data-img="/imgs/gallery/drawings/20230303&#40;1&#41;.jpg"
+                  >20230303&#40;1&#41;.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230303&#40;1&#41;.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230311" />
+                <label
+                  for="20230311"
+                   data-img="/imgs/gallery/drawings/20230311.jpg"
+                  >20230311.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230311.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230323" />
+                <label
+                  for="20230323"
+                   data-img="/imgs/gallery/drawings/20230323.jpg"
+                  >20230323.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230323.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230327" />
+                <label
+                  for="20230327"
+                   data-img="/imgs/gallery/drawings/20230327.jpg"
+                  >20230327.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230327.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230409" />
+                <label
+                  for="20230409"
+                   data-img="/imgs/gallery/drawings/20230409.jpg"
+                  >20230409.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230409.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230427" />
+                <label
+                  for="20230427"
+                   data-img="/imgs/gallery/drawings/20230427.jpg"
+                  >20230427.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230427.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230503" />
+                <label
+                  for="20230503"
+                   data-img="/imgs/gallery/drawings/20230503.jpg"
+                  >20230503.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230503.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230604" />
+                <label
+                  for="20230604"
+                   data-img="/imgs/gallery/drawings/20230604.jpg"
+                  >20230604.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230604.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230605" />
+                <label
+                  for="20230605"
+                   data-img="/imgs/gallery/drawings/20230605.jpg"
+                  >20230605.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230605.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230607" />
+                <label
+                  for="20230607"
+                   data-img="/imgs/gallery/drawings/20230607.jpg"
+                  >20230607.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230607.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="20230611" />
+                <label
+                  for="20230611"
+                   data-img="/imgs/gallery/drawings/20230611.jpg"
+                  >20230611.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/20230611.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="crookM" />
+                <label
+                  for="crookM"
+                   data-img="/imgs/gallery/drawings/crookManExploration.jpg"
+                  >crookManExploration.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="selfP" />
+                <label
+                  for="selfP"
+                   data-img="/imgs/gallery/drawings/selfP&#45;chibi.jpg"
+                  >selfP&#45;chibi.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="study" />
+                <label
+                  for="study"
+                   data-img="/imgs/gallery/drawings/study.jpg"
+                  >study.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/study.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="studyalt" />
+                <label
+                  for="studyalt"
+                   data-img="/imgs/gallery/drawings/study&#45;alt.jpg"
+                  >study&#45;alt.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="study1" />
+                <label
+                  for="study1"
+                   data-img="/imgs/gallery/drawings/study&#40;1&#41;.jpg"
+                  >study&#40;1&#41;.jpg</label
+                >
+                <a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+              <li class="entry">
+                <input type="radio" class="entry__btn" id="untGif" />
+                <label
+                  for="untGif"
+                   data-img="/imgs/gallery/drawings/untitled.gif"
+                  >untitled.gif</label
+                ><a
+                  class="entry__link"
+                  href="/imgs/gallery/drawings/untitled.gif"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >&#62;</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="cont dragbox__content__list--filter">
+            Image Files &#40;*. bmp,*. jpg, *. jpeg, *. png, *. gif, *. raw,
+            ...&#41;
+          </div>
+        </aside>
+        <div class="sideR">
+          <div class="imgContainer" id="imgDisplay-container">
+            <canvas
+              class="imgContainer__display"
+              id="imgDisplay"
+            ></canvas>
+          </div>
+          <div class="SideR--notes"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/clock_pixelizer.js"></script>
+    <script src="/js/dragger.js"></script>
+    <script src="/js/picView.js"></script>
+  </body>
+</html>

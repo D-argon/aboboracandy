@@ -1,0 +1,54 @@
+body {
+  background-color: #f2f2f2;
+  color: #202020;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poem {
+  height: 100vh;
+  padding: 3em 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+h1, p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+small {
+  color: #404040;
+  align-self: flex-start;
+
+  margin: 0 0 0.5em;
+}
+
+.nina::first-letter {
+  margin-right: 0.3em;
+  color: black;
+}
+
+.aureum {
+  color: #aa6f0d;
+}
+
+.explicacao {
+    font-size: 1rem;
+    padding: 0 5em 3em;
+    margin-right: auto;
+}

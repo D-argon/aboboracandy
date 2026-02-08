@@ -13,10 +13,32 @@
 
         <description>The freshest updates from my personal website</description>
 
-        <lastBuildDate>Sun, 9 Nov 2025 23:00:00 -0300</lastBuildDate>
+        <lastBuildDate>Sun, 08 Feb 2026 17:15:00 -0300</lastBuildDate>
 
         <docs>https://www.rssboard.org/rss-specification</docs>
-         <item>
+        <item>
+            <title>first of the year</title>
+            <description><![CDATA[
+				archbtw flexing is dumb and so am I
+            ]]></description>
+
+            <pubDate>Sun, 08 Feb 2026 17:15:00 -0300</pubDate>
+
+            <link>https://aboboracandy.neocities.org/posts/happyNewYuri.html</link>
+            <guid isPermaLink="false">260208</guid>
+        </item>
+        <item>
+            <title>abobora revival</title>
+            <description><![CDATA[
+                revamp part 2 and new log !!!
+            ]]></description>
+
+            <pubDate>Sat, 15 Nov 2025 13:00:00 -0300</pubDate>
+
+            <link>https://aboboracandy.neocities.org/posts/sweets-halloween-begginings.html</link>
+            <guid isPermaLink="false">251115</guid>
+        </item>
+        <item>
             <title>abobora revival</title>
             <description><![CDATA[
                 loooots of background stuff. still plenty to do.
@@ -25,7 +47,7 @@
             <pubDate>Sun, 9 Nov 2025 23:00:00 -0300</pubDate>
 
             <link>https://aboboracandy.neocities.org/journal.html</link>
-            <guid>https://aboboracandy.neocities.org/journal.html</guid>
+            <guid isPermaLink="false">251109</guid>
         </item>
         <item>
             <title>abobora revival</title>
@@ -35,7 +57,7 @@
 
             <pubDate>Sat, 25 Oct 2025 16:27:00 -0300</pubDate>
 
-            <link>https://aboboracandy.neocities.org/journal.html</link>
+            <link>https://aboboracandy.neocities.org/posts/elite_talk.html</link>
             <guid>https://aboboracandy.neocities.org/journal.html</guid>
         </item>
     </channel>
