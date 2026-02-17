@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>strawberry rot</title>
+    <link rel="stylesheet" href="/style/pages/soneto.css" />
+  </head>
+  <body>
+    <div class="poem">
+      <h1>
+        <a
+          href="https://x.com/legorajs/status/1428549299458088961"
+          target="_blank"
+          >Dinamarquês</a
+        >
+      </h1>
+      <small>Dedicado a Mello</small>
+      <p>Atirei a xícara ao chão.</p>
+      <p>
+        Agora, então, Dilema.<br />
+        Se despretencioso poema saberia,<br />
+        da crisálida ou sarcófago?<br />
+        Agora que descontento de ato frequente
+      </p>
+      <p>
+        estilhaços que não se recompor irão,<br />
+        esforço-me ao <span class="aureum">reparo áureo</span> <br />
+        ou contento-me ao refreio futuro?
+      </p>
+      <p>
+        Você me perdoa gentil<br />
+        contestos de 'devo eu'.<br />
+        Não sou como deveria
+      </p>
+      <p>
+        oh Senhor piedoso!<br />
+        Mas tenho saudade de casa<br />
+        e <span id="sera">não</span> quero esquecer
+      </p>
+    </div>
+    <div class="explicacao">
+      <p>
+        <a href="https://inv.nadeko.net/watch?v=681cN-5GfBQ" target="_blank"
+          >'Megadeth - Promises'</a
+        >
+        <br /><br />
+        reparo aúreo - <a href="https://en.wikipedia.org/wiki/Kintsugi">Kintsugi</a><br />
+    </p><br />
+     &#60;3
+    </div>
+    
+    <script>
+        setInterval(() => {
+        
+            let que = Math.floor(Math.random()*23) % 2;
+            let devo = document.getElementById("sera");
+            if(que)
+                devo.innerText = "";
+            else
+                devo.innerText = "não";
+        }, 2000)
+            
+    </script>
+  </body>
+</html>

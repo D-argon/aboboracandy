@@ -1,0 +1,561 @@
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
+*/
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+html, body {
+  scrollbar-color: transparent transparent;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.under-l {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.l-through {
+  text-decoration: line-through;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+@keyframes scans {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px 100%;
+  }
+}
+@keyframes ghost {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.5px 0 1px rgba(51, 255, 0, 0.5), -0.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px rgba(51, 255, 0, 0.5), -1.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px rgba(51, 255, 0, 0.5), -0.1px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px rgba(51, 255, 0, 0.5), -2px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px rgba(51, 255, 0, 0.5), -2.5px 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px rgba(51, 255, 0, 0.5), 0 0 1px rgba(0, 255, 51, 0.3), 0 0 3px;
+  }
+}
+@keyframes textShadowAlt {
+  0% {
+    text-shadow: 0.5px 0 1px rgba(232, 140, 12, 0.5), -0.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 1.5px 0 1px rgba(232, 140, 12, 0.5), -1.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.1px 0 1px rgba(232, 140, 12, 0.5), -0.1px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2px 0 1px rgba(232, 140, 12, 0.5), -2px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.5px 0 1px rgba(232, 140, 12, 0.5), -2.5px 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 0 0 1px rgba(232, 140, 12, 0.5), 0 0 1px rgba(232, 184, 12, 0.3), 0 0 3px;
+  }
+}
+@keyframes ledScroller {
+  0% {
+    transform: translateX(112%);
+  }
+  100% {
+    transform: translateX(-112%);
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes jitter {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, 0.5px) rotate(-0.6deg);
+  }
+  20% {
+    transform: translate(1px, -1px) rotate(0.6deg);
+  }
+  30% {
+    transform: translate(-0.6px, 1px) rotate(-0.4deg);
+  }
+  40% {
+    transform: translate(0.8px, -0.4px) rotate(0.3deg);
+  }
+  50% {
+    transform: translate(-0.5px, 0) rotate(0deg);
+  }
+  60% {
+    transform: translate(0.4px, -0.6px) rotate(0.5deg);
+  }
+  70% {
+    transform: translate(-0.8px, 0.8px) rotate(-0.6deg);
+  }
+  80% {
+    transform: translate(0.6px, -0.3px) rotate(0.2deg);
+  }
+  90% {
+    transform: translate(-0.2px, 0.4px) rotate(-0.2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: 0rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 1.5rem;
+  }
+}
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating to a reusable component.
+*/
+/*
+This file is used to contain all component imports.
+Files inside this folder can contain specific element styles and layout. 
+*/
+body {
+  font: normal 1rem/1.5 "w95fa", monospace;
+  background-color: #008080;
+  color: white;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  padding: 0 0.3em;
+  background-color: #c0c0c0;
+  border-bottom-width: 3px;
+  border-bottom-style: ridge;
+  border-bottom-color: white;
+}
+
+.menu {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 10vh;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-color: transparent transparent;
+  z-index: 1;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  gap: 0.25em;
+}
+
+.menu__btn {
+  color: #ec9615;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 90%;
+  padding: 0.6% 0.5em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  border: 4px ridge #808080;
+  border-color: white black black white;
+  color: black;
+  text-transform: capitalize;
+}
+.menu__btn.btn--is-clickable:hover, .menu__btn.btn--is-currentpage {
+  transform: translate(0.5px, 0.5px);
+  border-style: groove;
+  border-color: black white white black;
+  background: repeating-linear-gradient(0deg, #c0c0c0 0, #c0c0c0 1px, #dedede 1px, #dedede 2px);
+}
+.menu__btn.btn--is-clickable:hover::after, .menu__btn.btn--is-currentpage::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, #c0c0c0 0, #c0c0c0 1px, transparent 1px, transparent 2px);
+}
+.menu__btn.btn--is-currentpage {
+  text-shadow: 0.5px 0px black, 1.5px 0px black;
+  color: transparent;
+  letter-spacing: 1px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+header .clock {
+  width: 8%;
+  height: 80%;
+  margin-left: auto;
+  padding-left: 1em;
+  box-sizing: border-box;
+  border-style: groove;
+  border-color: black white white black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: black;
+}
+
+/* --main------------------------------------------- */
+.container {
+  height: 95vh;
+}
+.container__box {
+  height: 100%;
+  display: flex;
+}
+.container__box__buttons {
+  padding: 1em 2em 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, 6rem);
+  grid-template-rows: repeat(auto-fill, 6rem);
+  gap: 1.5em;
+}
+.container__box__buttons .btn-div {
+  width: 6rem;
+  height: 6rem;
+  padding: 0.25% 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 0.5em;
+}
+.container__box__buttons .btn-div__img {
+  max-width: 4em;
+  max-height: 4em;
+  cursor: pointer;
+}
+.container__box__buttons .btn-div__title {
+  cursor: default;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+/* ------btns------ */
+#freckle {
+  cursor: crosshair;
+}
+
+.iconActive {
+  outline: 2px dotted rgba(0, 0, 0, 0.5);
+}
+
+/* ----------dragbox---------- */
+/* .dragbox::before {
+    content: "";
+
+    padding: .2em;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: nwse-resize;
+  } */
+.dragbox {
+  width: 60vh;
+  box-sizing: border-box;
+  padding: 0 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+  background-color: #c0c0c0;
+}
+.dragbox__top {
+  height: 1.5em;
+  padding: 0.2em 0.2em 0.2em 0;
+  display: flex;
+  align-items: center;
+  background-color: #808080;
+}
+.dragbox__top--header {
+  height: 100%;
+  margin-left: 2%;
+  width: calc(100% - 6em);
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  text-shadow: 0.5px 0px #c0c0c0, 1.5px 0px #c0c0c0;
+  color: transparent;
+  letter-spacing: 1px;
+}
+.dragbox__top--options {
+  width: 6em;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  gap: 0.2em;
+}
+.dragbox__top--options__btns {
+  background-color: #c0c0c0;
+  border: 3px ridge #808080;
+  border-color: white black black white;
+  color: transparent;
+  text-shadow: 0.5px 0px black, 1.5px 0px black;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  box-sizing: border-box;
+}
+.dragbox__content {
+  background-color: white;
+  border: 3px ridge white;
+  border-top-color: black;
+  border-left-color: black;
+  color: black;
+  display: flex;
+  gap: 1em;
+}
+.dragbox__content--txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.dragbox__content--txt .links {
+  color: blue;
+}
+
+#pixelizer-dragbox {
+  transform: translate(-50%, -50%);
+}
+
+#pixelizer {
+  width: 100%;
+  height: 100%;
+}
+
+#txtToDo {
+  width: 15vw;
+  transform: translate(150%, -5%);
+}
+
+#txtJournal {
+  width: 35vw;
+}
+
+.txtdoc {
+  display: flex;
+  flex-direction: column;
+  max-height: 35vh;
+  padding: 1em 1.5em;
+  overflow-y: scroll;
+}
+.txtdoc ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 1em;
+  gap: 2%;
+}
+.txtdoc ul .txt-line, .txtdoc ul li {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+}
+.txtdoc ul .txt-line .krillyicoN, .txtdoc ul li .krillyicoN {
+  opacity: 0.5;
+  margin-left: 1em;
+}
+.txtdoc ul li::before {
+  content: "";
+  display: list-item;
+}
+
+/* ---------misc--------- */
+.hidden--text {
+  color: red;
+}
+
+.done {
+  -webkit-text-decoration: line-through 0.2rem rgb(10, 97, 10);
+          text-decoration: line-through 0.2rem rgb(10, 97, 10);
+}
+
+/* ---------------------mobile--------------------- */
+@media only screen and (max-width: 1200px) {
+  body {
+    font: normal 1rem/120% "w95fa", monospace;
+  }
+  header {
+    gap: 0.5em;
+  }
+  header .menu {
+    gap: 1%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+  }
+  header .menu__btns {
+    font-size: 1.2em;
+  }
+  header .clock {
+    width: 35vw;
+    margin-left: auto;
+  }
+  .text {
+    padding: 1em;
+    font-size: 1.25em;
+    box-sizing: border-box;
+  }
+  .container__box__buttons {
+    padding: 0 1.5em;
+    gap: 3%;
+  }
+  .btn-div {
+    max-width: 6em;
+  }
+  .btn-div__title {
+    font-size: 0.85em;
+  }
+  .dragbox {
+    max-width: 70vw;
+  }
+  .dragbox__options {
+    width: 4em;
+  }
+  #pixelizer-dragbox {
+    transform: translate(-30%, -80%);
+  }
+  #txtToDo {
+    width: 50vw;
+    transform: translate(-9%, 7%);
+  }
+  #txtJournal {
+    width: 80vw;
+  }
+  ul {
+    padding-left: 1.3em;
+    margin-top: 0.5em;
+  }
+  .txt-line, .txtdoc ul li {
+    margin-top: 0.25em;
+  }
+}

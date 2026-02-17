@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/imgs/favicon.ico?v=4" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/style/pages/not.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $.get("64.txt", (data) => {
+          let audioElem = new Audio();
+          audioElem.src = `data:audio/mp3;base64,${data}`;
+
+          audioElem.play();
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="style/styles.css" />
+    <title>Not Found</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>
+        <a href="https://www.youtube.com/watch?v=g498OLAGUm8">L o s t</a>
+      </h1>
+      <p>
+        The walls leak and there's a subtle smell of moisty stones. A torch
+        reflects but an empty hallway with no apparent ending and a murky
+        reflection of thee under thy feet.<br />On the walls, a criptic marking,
+        404.<br /><br />
+        <span class="last"
+          >Thou wanderest for too long now.<br />Reassure thy seek...<br />is It
+          not a mere illusion from a delirious mind full of dreams and
+          ideas?</span
+        >
+      </p>
+      <!---->
+      <!---->
+      <!---->
+      <a href="." class="btn"
+        ><img src="/imgs/bttn/aboborabtn.gif" title="Trail back" alt="home"
+      /></a>
+    </main>
+  </body>
+</html>
