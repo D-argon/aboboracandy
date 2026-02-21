@@ -1,0 +1,258 @@
+// pages/index.scss
+@use "../styles" as *;
+@use "sass:color";
+
+// colors
+$background: $crt-black;
+$text-primary: $crt-green;
+$text-secondary: $crt-darkgreen;
+$accent: $crt-ambar;
+$accent-secondary: $crt-darkambar;
+
+// font
+$font-family: 400 1rem/1.5 $imb;
+
+body {
+  background-color: $background;
+  color: $crt-green;
+  font: $font-family;
+
+  ::-moz-selection,
+  ::selection {
+    background-color: color.change($text-primary, $alpha: 0.5);
+  }
+}
+
+header {
+  height: 10vh;
+
+  .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    box-sizing: border-box;
+    height: 10vh;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+    z-index: 1;
+  }
+}
+
+.menu__btn {
+  color: $text-primary;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.btn--is-currentpage {
+    color: $text-secondary;
+    cursor: default;
+  }
+
+  &.btn--is-clickable:hover {
+    color: $text-secondary;
+    transform: translate(0.1px, 2px);
+  }
+}
+
+.container {
+  height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clock {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+
+  &__date {
+    margin: 0 0 2em;
+  }
+
+  &__time {
+    font-size: 4em;
+    max-width: fit-content;
+  }
+
+  &__txt {
+    font-size: 1.25em;
+    max-width: fit-content;
+  }
+}
+
+.specials {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  letter-spacing: 2px;
+
+  &--content {
+    position: relative;
+    display: inline-block;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    animation: ledScroller 10s linear infinite;
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      right: 100%;
+      padding-right: 2rem; /* spacing between loops */
+    }
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 100%;
+      padding-left: 2rem; /* spacing between loops */
+    }
+  }
+}
+
+.link,
+.alt {
+  color: $accent;
+  animation: textShadowAlt 1.5s linear infinite;
+
+  &::-moz-selection,
+  &::selection {
+    background-color: color.change($accent-secondary, $alpha: 0.5);
+  }
+}
+
+.logbox {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1%;
+  width: 20%;
+
+  &__title {
+    box-sizing: border-box;
+    color: inherit;
+    font-size: 1.25rem;
+    margin: 0;
+    padding-left: 5%;
+    text-decoration: none;
+  }
+
+  hr {
+    border-width: 2px;
+    border-color: $text-primary;
+    margin: 1em 0 0;
+    width: 75%;
+  }
+}
+
+.logbox__list {
+  font-size: 1rem;
+  max-height: 85%;
+  overflow-y: scroll;
+  padding: 10% 0;
+  scrollbar-color: transparent transparent;
+
+  ul {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.logbox__list__entry label {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.entry__btn {
+  display: none;
+}
+
+.entry__box {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  max-height: 25vh;
+  width: 110%;
+  border: 1px solid $text-primary;
+  overflow-y: scroll;
+  padding: 5% 2% 5% 0;
+  background-color: $background;
+  font-size: 1em;
+  letter-spacing: 2px;
+  line-height: 140%;
+  scrollbar-color: transparent transparent;
+
+  // .small {
+  //   font-size: 0.75em;
+  //   letter-spacing: normal;
+  //   line-height: 1;
+  // }
+
+  &__item {
+    margin: 3% 0;
+  }
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer__title {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    text-align: center;
+    cursor: pointer;
+
+    &::-moz-selection,
+    ::selection {
+      background-color: transparent;
+    }
+  }
+}
+
+/* ------------------------ mobile -- */
+@media only screen and (max-width: 1200px) {
+  .menu__btn {
+    flex-shrink: 0;
+  }
+
+  .clock {
+    margin-top: 30%;
+  }
+
+  .logbox {
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%);
+    height: 35%;
+    width: 60vw;
+
+    hr {
+      width: 100%;
+    }
+  }
+
+  .logbox__list {
+    max-height: 50%;
+    padding: 0;
+
+    .entry__btn:checked ~ .entry__box {
+      display: block;
+      top: 0;
+      right: 10%;
+    }
+  }
+}

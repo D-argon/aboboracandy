@@ -1,5 +1,5 @@
-aboboracandy.code-workspace
-
 !*.css
-*.scss
 *.map
+
+dist/
+__pycache__

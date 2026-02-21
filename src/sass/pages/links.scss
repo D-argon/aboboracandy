@@ -1,0 +1,161 @@
+// pages/links.scss
+@use "../styles" as *;
+@use "sass:color";
+
+$magenta: #9d2148;
+$bg-color: $magenta;
+$family-font: 400 1.5rem/1.25 $pixel;
+
+%pseudo {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 300vh;
+  position: relative;
+  color: $crt-muted-green;
+  font: $family-font;
+  background-color: $bg-color;
+
+  &::before {
+    @extend %pseudo;
+    outline-offset: -1em;
+    outline: $black 5px solid;
+    z-index: 0;
+  }
+
+  &::after {
+    @extend %pseudo;
+    background: bottom / 100% auto no-repeat url("/imgs/media/raven3.png"); 
+    opacity: 0.8;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(53, 21, 38, 0.6);
+  z-index: 1;
+
+  &:hover {
+    background-color: color.mix(
+      $bg-color,
+      $black,
+      $weight: 80%,
+      $method: oklab
+    );
+    transition: 0.3s ease;
+  }
+
+  .menu {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5%;
+    height: 10vh;
+    padding-left: 2%;
+    overflow-x: scroll;
+    position: relative;
+    scrollbar-color: transparent transparent;
+    z-index: 1;
+  }
+}
+
+.menu__btn {
+  color: $pumpkin;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.btn--is-currentpage {
+    cursor: default;
+  }
+}
+
+.box {
+  margin: 2em 5%;
+  padding: 2% 5%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+  background-color: color.change($black, $alpha: 0.25);
+  outline: 3px solid color.change($black, $alpha: 0.3);
+}
+
+.box__title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: $pumpkin;
+}
+
+.box__txt {
+  padding: 0 1em;
+}
+
+.box .btn__list {
+  @extend .box__txt;
+  display: flex;
+  gap: 1em;
+}
+
+#cssjoy-webring {
+  max-width: 45%;
+  border: 2px outset;
+  box-sizing: border-box;
+  text-align: center;
+
+  .webring__wrapper {
+    display: flex;
+
+    .webring__wrapper__btn {
+      flex: 1;
+      padding: 0.1em;
+      border: 2px inset;
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    height: 225vh;
+  }
+
+  .box {
+    margin: 1em 1em;
+    padding: 1em 1em;
+    text-align: center;
+  }
+
+  .box__title,
+  .box__txt {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .links__list {
+    text-align: start;
+  }
+
+  .box .btn__list {
+    width: 100%;
+    margin: 0;
+    pad: 0;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  #cssjoy-webring {
+    max-width: 100%;
+  }
+}

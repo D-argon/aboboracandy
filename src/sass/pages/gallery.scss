@@ -1,0 +1,602 @@
+// pages/gallery.scss
+@use "../styles" as *;
+@use "sass:color";
+
+body {
+  font: normal 1rem/1.5 "w95fa", monospace;
+  background-color: #008080;
+  color: white;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  padding: 0 0.3em;
+  background-color: #c0c0c0;
+  border-bottom-width: 3px;
+  border-bottom-style: ridge;
+  border-bottom-color: white;
+}
+
+.menu {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 10vh;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-color: transparent transparent;
+  z-index: 1;
+
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  gap: 0.25em;
+}
+
+.menu__btn {
+  color: #ec9615;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  height: 90%;
+  padding: 0.6% 0.5em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  border: 4px ridge #808080;
+  border-color: white black black white;
+  color: black;
+  text-transform: capitalize;
+
+  &.btn--is-clickable:hover,
+  &.btn--is-currentpage {
+    transform: translate(0.5px, 0.5px);
+    border-style: groove;
+    border-color: black white white black;
+    background: repeating-linear-gradient(
+      0deg,
+      #c0c0c0 0,
+      #c0c0c0 1px,
+      #dedede 1px,
+      #dedede 2px
+    );
+
+    &::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        #c0c0c0 0,
+        #c0c0c0 1px,
+        transparent 1px,
+        transparent 2px
+      );
+    }
+  }
+
+  &.btn--is-currentpage {
+    cursor: default;
+    text-shadow: 0.5px 0px black, 1.5px 0px black;
+    color: transparent;
+    letter-spacing: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+
+header .clock {
+  width: 8%;
+  height: 80%;
+  margin-left: auto;
+  padding-left: 1em;
+  box-sizing: border-box;
+  border-style: groove;
+  border-color: black white white black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: black;
+}
+
+/* --main------------------------------------------- */
+.container {
+  height: 95vh;
+}
+
+.container__box {
+  height: 100%;
+  display: flex;
+}
+
+.container__box__buttons {
+  padding: 1em 2em 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, 6rem);
+  grid-template-rows: repeat(auto-fill, 6rem);
+  gap: 1.5em;
+}
+
+.container__box__buttons .btn-div {
+  width: 6rem;
+  height: 6rem;
+  padding: 0.25% 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 0.5em;
+}
+
+.container__box__buttons .btn-div__img {
+  max-width: 4em;
+  max-height: 4em;
+  cursor: pointer;
+}
+
+.container__box__buttons .btn-div__title {
+  cursor: default;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+/* ------btns------ */
+#freckle {
+  cursor: crosshair;
+}
+
+.iconActive {
+  outline: 2px dotted rgba(0, 0, 0, 0.5);
+}
+
+/* ----------dragbox---------- */
+/* .dragbox::before {
+    content: "";
+
+    padding: .2em;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: nwse-resize;
+  } */
+
+.dragbox {
+  width: 60vh;
+  box-sizing: border-box;
+  padding: 0 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+  background-color: #c0c0c0;
+}
+
+.dragbox__top {
+  height: 1.5em;
+  padding: 0.2em 0.2em 0.2em 0;
+  display: flex;
+  align-items: center;
+  background-color: #808080;
+}
+
+.dragbox__top--header {
+  height: 100%;
+  margin-left: 2%;
+  width: calc(100% - 6em);
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  text-shadow: 0.5px 0px #c0c0c0, 1.5px 0px #c0c0c0;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+.dragbox__top--options {
+  width: 6em;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  gap: 0.2em;
+}
+
+.dragbox__top--options__btns {
+  background-color: #c0c0c0;
+  border: 3px ridge #808080;
+  border-color: white black black white;
+  color: transparent;
+  text-shadow: 0.5px 0px black, 1.5px 0px black;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  box-sizing: border-box;
+}
+
+.dragbox__content {
+  background-color: white;
+  border: 3px ridge white;
+  border-top-color: black;
+  border-left-color: black;
+  color: black;
+  display: flex;
+  gap: 1em;
+}
+
+.dragbox__content--txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.dragbox__content--txt .links {
+  color: blue;
+}
+
+#pixelizer-dragbox {
+  transform: translate(-50%, -50%);
+}
+
+#pixelizer {
+  width: 100%;
+  height: 100%;
+}
+
+#txtToDo {
+  width: 15vw;
+  transform: translate(150%, -5%);
+}
+
+#txtJournal {
+  width: 35vw;
+}
+
+.txtdoc {
+  display: flex;
+  flex-direction: column;
+  max-height: 35vh;
+  padding: 1em 1.5em;
+  overflow-y: scroll;
+}
+
+.txtdoc ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 1em;
+  gap: 2%;
+
+  .txt-line {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+
+    .krillyicoN {
+      opacity: 0.5;
+      margin-left: 1em;
+    }
+  }
+
+  li {
+    @extend .txt-line;
+
+    &::before {
+      content: "";
+      display: list-item;
+    }
+  }
+}
+
+/* ---------misc--------- */
+.hidden--text {
+  color: red;
+}
+
+.done {
+  -webkit-text-decoration: line-through 0.2rem rgb(10, 97, 10);
+  text-decoration: line-through 0.2rem rgb(10, 97, 10);
+}
+
+/* ---------------------mobile--------------------- */
+@media only screen and (max-width: 1200px) {
+  body {
+    font: normal 1rem/120% "w95fa", monospace;
+  }
+  header {
+    gap: 0.5em;
+  }
+  header .menu {
+    gap: 1%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+  }
+  header .menu__btns {
+    font-size: 1.2em;
+  }
+  header .clock {
+    width: 35vw;
+    margin-left: auto;
+  }
+  .text {
+    padding: 1em;
+    font-size: 1.25em;
+    box-sizing: border-box;
+  }
+  .container__box__buttons {
+    padding: 0 1.5em;
+    gap: 3%;
+  }
+  .btn-div {
+    max-width: 6em;
+  }
+  .btn-div__title {
+    font-size: 0.85em;
+  }
+  .dragbox {
+    max-width: 70vw;
+  }
+  .dragbox__options {
+    width: 4em;
+  }
+  #pixelizer-dragbox {
+    transform: translate(-30%, -80%);
+  }
+  #txtToDo {
+    width: 50vw;
+    transform: translate(-9%, 7%);
+  }
+  #txtJournal {
+    width: 80vw;
+  }
+  ul {
+    padding-left: 1.3em;
+    margin-top: 0.5em;
+  }
+  .txt-line,
+  .txtdoc ul li {
+    margin-top: 0.25em;
+  }
+}
+
+#picView {
+  width: 90vw;
+  height: 90vh;
+  transform: translate(-50%, -46%);
+}
+
+#picView .dragbox__top {
+  background-color: #010080;
+  box-sizing: border-box;
+  height: 5%;
+}
+
+#picView .dragbox__top--header {
+  text-shadow: 0.5px 0px #f2f2f2, 1.5px 0px #f2f2f2;
+}
+
+#picView .configs {
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  gap: 1em;
+  height: 4%;
+  padding: 0.3em 0 0 1.4em;
+}
+
+#picView .configs__options {
+  display: inline-block;
+}
+
+#picView .configs__options::first-letter {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#picView hr {
+  margin: 0.5em 0 0;
+  border: solid 1px #404040;
+  border-top-color: #f2f2f2;
+}
+
+#picView .dragbox__content {
+  background-color: transparent;
+  border: none;
+  height: 90%;
+  box-sizing: border-box;
+  gap: 1em;
+  padding: 0.5em 0 1em;
+}
+
+#picView .dragbox__content__list {
+  width: 25%;
+  border: 2px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+  margin: 0 1em;
+  box-sizing: border-box;
+  padding: 0.75em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#picView .dragbox__content__list .cont {
+  background-color: #f5f5f5;
+  border: 3px groove white;
+  border-top-color: black;
+  border-left-color: black;
+  font-weight: bold;
+  word-break: keep-all;
+}
+
+#picView .dragbox__content__list--dir,
+#picView .dragbox__content__list--files {
+  height: 45%;
+  font-size: 1rem;
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+}
+
+#picView .dragbox__content__list--dir ul,
+#picView .dragbox__content__list--files ul {
+  list-style-type: none;
+  height: 10%;
+  margin: 0;
+  padding: 0;
+}
+
+#picView .dragbox__content__list--dir ul .entry,
+#picView .dragbox__content__list--files ul .entry {
+  color: black;
+  cursor: pointer;
+  padding: 0 0 0 0.5em;
+}
+
+#picView .dragbox__content__list--dir ul .entry__btn,
+#picView .dragbox__content__list--files ul .entry__btn {
+  display: none;
+}
+
+#picView .dragbox__content__list--dir ul .entry label,
+#picView .dragbox__content__list--files ul .entry label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#picView .dragbox__content__list--dir ul .entry .entry,
+#picView .dragbox__content__list--files ul .entry .entry {
+  display: none;
+  padding-left: 1em;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+}
+
+#picView .dragbox__content__list--dir ul .entry .entry .small,
+#picView .dragbox__content__list--files ul .entry .entry .small {
+  font-size: 0.75em;
+  letter-spacing: normal;
+  line-height: 1;
+}
+
+#picView .dragbox__content__list--dir ul .entry.selected,
+#picView .dragbox__content__list--files ul .entry.selected {
+  background-color: #010080;
+  color: white;
+}
+
+#picView .dragbox__content__list--files ul .entry {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5em;
+}
+
+#picView .dragbox__content__list--files ul .entry__link {
+  padding: 0 0.2em;
+}
+
+#picView .dragbox__content__list--filter {
+  height: 5%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 0 0.5em;
+}
+
+#picView .dragbox__content .sideR {
+  width: 75%;
+  height: 80%;
+  margin-right: 0.5em;
+  border: 2px ridge white;
+  border-top-color: black;
+  border-left-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#picView .dragbox__content .sideR .imgContainer {
+  width: 80%;
+  height: 85%;
+  border: 2px ridge black;
+  border-top-color: white;
+  border-left-color: white;
+  display: flex;
+  justify-content: center;
+  
+  #imgDisplay {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+#picView .dragbox__content .sideR--notes {
+  background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    height: 200vh;
+    overflow: auto;
+  }
+  #picView {
+    height: 150vh;
+    max-width: 90%;
+    width: 95vw;
+    transform: translate(-50%, -27%);
+  }
+  #picView .dragbox__top {
+    height: 3.5%;
+  }
+  #picView .configs {
+    height: 2%;
+    margin-top: 0.2em;
+  }
+  #picView .dragbox__content {
+    height: 93%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 0.5em 1em;
+  }
+  #picView .dragbox__content__list {
+    width: 100%;
+    height: 35%;
+    box-sizing: border-box;
+    padding: 0.75em 1em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  #picView .dragbox__content .sideR {
+    width: 100%;
+    height: 65%;
+    margin: 0;
+  }
+  #picView .dragbox__content .sideR .imgContainer {
+    width: 100%;
+    height: 75%;
+  }
+}

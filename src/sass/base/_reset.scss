@@ -1,0 +1,45 @@
+html, body {
+  scrollbar-color: transparent transparent;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}

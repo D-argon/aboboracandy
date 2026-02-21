@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+.crt {
+  animation: textShadow 4s linear infinite;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      color.change($crt-black, $alpha: 0.1),
+      color.change($black, $alpha: 0.7)
+    );
+    background-size: 100% 3px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: scans 8s cubic-bezier(0.4, 0, 1, 1) infinite;
+  }
+}

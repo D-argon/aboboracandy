@@ -1,0 +1,12 @@
+.hidden {
+  display: none;
+}
+
+.hidden-text {
+  opacity: 0;
+  position: relative;
+
+  &:hover {
+    opacity: 1;
+  }
+}
